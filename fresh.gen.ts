@@ -9,10 +9,12 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
-import * as $$$0 from "./sections/GetStarted.tsx";
+import * as $$$0 from "./sections/Benefits.tsx";
 import * as $$$1 from "./sections/Head.tsx";
-import * as $$$2 from "./sections/Markdown.tsx";
-import * as $$$3 from "./sections/QuillText.tsx";
+import * as $$$2 from "./sections/Home.tsx";
+import * as $$$3 from "./sections/Markdown.tsx";
+import * as $$$4 from "./sections/QuillText.tsx";
+import * as $$$5 from "./sections/TypesMattresses.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -24,28 +26,17 @@ const manifest: DecoManifest = {
   },
   islands: { "./islands/LiveControls.tsx": $$0 },
   sections: {
-    "./sections/GetStarted.tsx": $$$0,
+    "./sections/Benefits.tsx": $$$0,
     "./sections/Head.tsx": $$$1,
-    "./sections/Markdown.tsx": $$$2,
-    "./sections/QuillText.tsx": $$$3,
+    "./sections/Home.tsx": $$$2,
+    "./sections/Markdown.tsx": $$$3,
+    "./sections/QuillText.tsx": $$$4,
+    "./sections/TypesMattresses.tsx": $$$5,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
-    "./sections/GetStarted.tsx": {
-      "inputSchema": {
-        "title": " Get Started",
-        "type": "object",
-        "properties": {
-          "enableInspectVSCode": {
-            "type": [
-              "boolean",
-              "null",
-            ],
-            "title": "Enable Inspect V S Code",
-          },
-        },
-        "required": [],
-      },
+    "./sections/Benefits.tsx": {
+      "inputSchema": null,
       "outputSchema": null,
     },
     "./sections/Head.tsx": {
@@ -97,6 +88,10 @@ const manifest: DecoManifest = {
       },
       "outputSchema": null,
     },
+    "./sections/Home.tsx": {
+      "inputSchema": null,
+      "outputSchema": null,
+    },
     "./sections/Markdown.tsx": {
       "inputSchema": {
         "title": " Markdown",
@@ -130,6 +125,10 @@ const manifest: DecoManifest = {
           "html",
         ],
       },
+      "outputSchema": null,
+    },
+    "./sections/TypesMattresses.tsx": {
+      "inputSchema": null,
       "outputSchema": null,
     },
     "./functions/LoadGitHubRaw.ts": {
