@@ -12,9 +12,8 @@ import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/Benefits.tsx";
 import * as $$$1 from "./sections/Head.tsx";
 import * as $$$2 from "./sections/Home.tsx";
-import * as $$$3 from "./sections/Markdown.tsx";
-import * as $$$4 from "./sections/QuillText.tsx";
-import * as $$$5 from "./sections/TypesMattresses.tsx";
+import * as $$$3 from "./sections/MattressSize.tsx";
+import * as $$$4 from "./sections/TypesMattresses.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -29,9 +28,8 @@ const manifest: DecoManifest = {
     "./sections/Benefits.tsx": $$$0,
     "./sections/Head.tsx": $$$1,
     "./sections/Home.tsx": $$$2,
-    "./sections/Markdown.tsx": $$$3,
-    "./sections/QuillText.tsx": $$$4,
-    "./sections/TypesMattresses.tsx": $$$5,
+    "./sections/MattressSize.tsx": $$$3,
+    "./sections/TypesMattresses.tsx": $$$4,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
@@ -92,39 +90,8 @@ const manifest: DecoManifest = {
       "inputSchema": null,
       "outputSchema": null,
     },
-    "./sections/Markdown.tsx": {
-      "inputSchema": {
-        "title": " Markdown",
-        "type": "object",
-        "properties": {
-          "text": {
-            "$id": "5b1cd5713a375e18bb93e9635b8a2dc5fc2672cf",
-            "format": "live-function",
-            "type": "string",
-            "title": "Text",
-          },
-        },
-        "required": [
-          "text",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/QuillText.tsx": {
-      "inputSchema": {
-        "title": " Quill Text",
-        "type": "object",
-        "properties": {
-          "html": {
-            "format": "html",
-            "type": "string",
-            "title": "Html",
-          },
-        },
-        "required": [
-          "html",
-        ],
-      },
+    "./sections/MattressSize.tsx": {
+      "inputSchema": null,
       "outputSchema": null,
     },
     "./sections/TypesMattresses.tsx": {
