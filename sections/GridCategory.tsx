@@ -13,6 +13,7 @@ export interface Props {
 }
 
 function GridCategory({ gridItem, allCategories }: Props) {
+  const title = {'text-align': 'center'}
   const text = {'text-align': 'center'}
   const grid = {
     'display': 'grid',
@@ -52,7 +53,7 @@ function GridCategory({ gridItem, allCategories }: Props) {
 
   return (
     <div class="mx-[25px]">
-      <h6 class="text-[1.25rem] pt-[50px] pb-[15px] px-[59px]" style={text}>Produtos exclusivos, com <span class="font-[700] text-[#ed1c24]">qualidade e alta durabilidade</span></h6>
+      <h6 class="text-[1.25rem] pt-[50px] pb-[15px] px-[1rem]" style={text}>Produtos exclusivos, com <span class="font-[700] text-[#ed1c24]">qualidade e alta durabilidade</span></h6>
       <p class="text-[1rem] mb-[20px]" style={text}><strong>Compre por categoria</strong></p>
       <div style={grid}>
         {gridItem.map((item, idx) => (

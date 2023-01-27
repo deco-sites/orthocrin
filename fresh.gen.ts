@@ -8,14 +8,25 @@ import * as $0 from "./routes/[...catchall].tsx";
 import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
-import * as $$0 from "./islands/LiveControls.tsx";
-import * as $$$0 from "./sections/Benefits.tsx";
-import * as $$$1 from "./sections/GridCategory.tsx";
-import * as $$$2 from "./sections/Head.tsx";
-import * as $$$3 from "./sections/Home.tsx";
-import * as $$$4 from "./sections/MattressSize.tsx";
-import * as $$$5 from "./sections/TypesMattresses.tsx";
+import * as $$0 from "./islands/AddToCart.tsx";
+import * as $$1 from "./islands/LiveControls.tsx";
+import * as $$2 from "./islands/Minicart.tsx";
+import * as $$3 from "./islands/ProductInformation.tsx";
+import * as $$$0 from "./sections/BeFranchisor.tsx";
+import * as $$$1 from "./sections/Benefits.tsx";
+import * as $$$2 from "./sections/Footer.tsx";
+import * as $$$3 from "./sections/GridCategory.tsx";
+import * as $$$4 from "./sections/Head.tsx";
+import * as $$$5 from "./sections/Home.tsx";
+import * as $$$6 from "./sections/MattressSize.tsx";
+import * as $$$7 from "./sections/ProductDetails.tsx";
+import * as $$$8 from "./sections/ProductShelf.tsx";
+import * as $$$9 from "./sections/TalkToSpecialist.tsx";
+import * as $$$10 from "./sections/TypesMattresses.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
+import * as $$$$1 from "./functions/vtexProductDetailsPage.ts";
+import * as $$$$2 from "./functions/vtexProductList.ts";
+import * as $$$$3 from "./functions/vtexProductListingPage.ts";
 
 const manifest: DecoManifest = {
   routes: {
@@ -24,19 +35,102 @@ const manifest: DecoManifest = {
     "./routes/_middleware.ts": $2,
     "./routes/index.tsx": $3,
   },
-  islands: { "./islands/LiveControls.tsx": $$0 },
-  sections: {
-    "./sections/Benefits.tsx": $$$0,
-    "./sections/GridCategory.tsx": $$$1,
-    "./sections/Head.tsx": $$$2,
-    "./sections/Home.tsx": $$$3,
-    "./sections/MattressSize.tsx": $$$4,
-    "./sections/TypesMattresses.tsx": $$$5,
+  islands: {
+    "./islands/AddToCart.tsx": $$0,
+    "./islands/LiveControls.tsx": $$1,
+    "./islands/Minicart.tsx": $$2,
+    "./islands/ProductInformation.tsx": $$3,
   },
-  functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
+  sections: {
+    "./sections/BeFranchisor.tsx": $$$0,
+    "./sections/Benefits.tsx": $$$1,
+    "./sections/Footer.tsx": $$$2,
+    "./sections/GridCategory.tsx": $$$3,
+    "./sections/Head.tsx": $$$4,
+    "./sections/Home.tsx": $$$5,
+    "./sections/MattressSize.tsx": $$$6,
+    "./sections/ProductDetails.tsx": $$$7,
+    "./sections/ProductShelf.tsx": $$$8,
+    "./sections/TalkToSpecialist.tsx": $$$9,
+    "./sections/TypesMattresses.tsx": $$$10,
+  },
+  functions: {
+    "./functions/LoadGitHubRaw.ts": $$$$0,
+    "./functions/vtexProductDetailsPage.ts": $$$$1,
+    "./functions/vtexProductList.ts": $$$$2,
+    "./functions/vtexProductListingPage.ts": $$$$3,
+  },
   schemas: {
+    "./sections/BeFranchisor.tsx": {
+      "inputSchema": {
+        "title": " Be Franchisor",
+        "type": "object",
+        "properties": {
+          "link": {
+            "type": "string",
+            "title": "Link",
+          },
+        },
+        "required": [
+          "link",
+        ],
+      },
+      "outputSchema": null,
+    },
     "./sections/Benefits.tsx": {
       "inputSchema": null,
+      "outputSchema": null,
+    },
+    "./sections/Footer.tsx": {
+      "inputSchema": {
+        "title": " Footer",
+        "type": "object",
+        "properties": {
+          "footerLinks": {
+            "type": "array",
+            "items": {
+              "title": "Items",
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "title": "Title",
+                },
+                "links": {
+                  "type": "array",
+                  "items": {
+                    "title": "Links",
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "title": "Name",
+                      },
+                      "link": {
+                        "type": "string",
+                        "title": "Link",
+                      },
+                    },
+                    "required": [
+                      "name",
+                      "link",
+                    ],
+                  },
+                  "title": "Links",
+                },
+              },
+              "required": [
+                "title",
+                "links",
+              ],
+            },
+            "title": "Footer Links",
+          },
+        },
+        "required": [
+          "footerLinks",
+        ],
+      },
       "outputSchema": null,
     },
     "./sections/GridCategory.tsx": {
@@ -146,6 +240,92 @@ const manifest: DecoManifest = {
       "inputSchema": null,
       "outputSchema": null,
     },
+    "./sections/ProductDetails.tsx": {
+      "inputSchema": {
+        "title": " Product Details",
+        "type": "object",
+        "properties": {
+          "page": {
+            "$id": "85d77d809b0be6ec54dbe06b714da53af53b54db",
+            "format": "live-function",
+            "type": "string",
+            "title": "Page",
+          },
+        },
+        "required": [
+          "page",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/ProductShelf.tsx": {
+      "inputSchema": {
+        "title": " Product Shelf",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+          },
+          "products": {
+            "$id": "546cbd7d0ccd06d3cfddd3184a52c465c9b5139a",
+            "format": "live-function",
+            "type": "string",
+            "title": "Products",
+          },
+        },
+        "required": [
+          "title",
+          "products",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/TalkToSpecialist.tsx": {
+      "inputSchema": {
+        "title": " Talk To Specialist",
+        "type": "object",
+        "properties": {
+          "benefits": {
+            "type": "array",
+            "items": {
+              "title": "Items",
+              "type": "object",
+              "properties": {
+                "icon": {
+                  "format": "image-uri",
+                  "type": "string",
+                  "title": "Icon",
+                },
+                "title": {
+                  "type": "string",
+                  "title": "Title",
+                },
+                "description": {
+                  "type": "string",
+                  "title": "Description",
+                },
+              },
+              "required": [
+                "icon",
+                "title",
+                "description",
+              ],
+            },
+            "title": "Benefits",
+          },
+          "linkSpecialist": {
+            "type": "string",
+            "title": "Link Specialist",
+          },
+        },
+        "required": [
+          "benefits",
+          "linkSpecialist",
+        ],
+      },
+      "outputSchema": null,
+    },
     "./sections/TypesMattresses.tsx": {
       "inputSchema": null,
       "outputSchema": null,
@@ -183,6 +363,85 @@ const manifest: DecoManifest = {
         "properties": {
           "data": {
             "$id": "5b1cd5713a375e18bb93e9635b8a2dc5fc2672cf",
+          },
+        },
+        "additionalProperties": true,
+      },
+    },
+    "./functions/vtexProductDetailsPage.ts": {
+      "inputSchema": {
+        "type": "null",
+        "title": "Vtex Product Details Page",
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$id": "85d77d809b0be6ec54dbe06b714da53af53b54db",
+          },
+        },
+        "additionalProperties": true,
+      },
+    },
+    "./functions/vtexProductList.ts": {
+      "inputSchema": {
+        "title": "Vtex Product List",
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "title": "Query",
+            "description": "query to use on search",
+          },
+          "count": {
+            "type": "number",
+            "title": "Count",
+            "description": "total number of items to display",
+          },
+        },
+        "required": [
+          "query",
+          "count",
+        ],
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$id": "546cbd7d0ccd06d3cfddd3184a52c465c9b5139a",
+          },
+        },
+        "additionalProperties": true,
+      },
+    },
+    "./functions/vtexProductListingPage.ts": {
+      "inputSchema": {
+        "title": "Vtex Product Listing Page",
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Query",
+            "description": "overides the query term",
+          },
+          "count": {
+            "type": "number",
+            "title": "Items per page",
+            "description": "number of products per page to display",
+          },
+        },
+        "required": [
+          "count",
+        ],
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$id": "62615533560fc71180a86d2f3398b2396d2cbbc5",
           },
         },
         "additionalProperties": true,
