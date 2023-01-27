@@ -10,10 +10,11 @@ import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/Benefits.tsx";
-import * as $$$1 from "./sections/Head.tsx";
-import * as $$$2 from "./sections/Home.tsx";
-import * as $$$3 from "./sections/MattressSize.tsx";
-import * as $$$4 from "./sections/TypesMattresses.tsx";
+import * as $$$1 from "./sections/GridCategory.tsx";
+import * as $$$2 from "./sections/Head.tsx";
+import * as $$$3 from "./sections/Home.tsx";
+import * as $$$4 from "./sections/MattressSize.tsx";
+import * as $$$5 from "./sections/TypesMattresses.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -26,15 +27,66 @@ const manifest: DecoManifest = {
   islands: { "./islands/LiveControls.tsx": $$0 },
   sections: {
     "./sections/Benefits.tsx": $$$0,
-    "./sections/Head.tsx": $$$1,
-    "./sections/Home.tsx": $$$2,
-    "./sections/MattressSize.tsx": $$$3,
-    "./sections/TypesMattresses.tsx": $$$4,
+    "./sections/GridCategory.tsx": $$$1,
+    "./sections/Head.tsx": $$$2,
+    "./sections/Home.tsx": $$$3,
+    "./sections/MattressSize.tsx": $$$4,
+    "./sections/TypesMattresses.tsx": $$$5,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
     "./sections/Benefits.tsx": {
       "inputSchema": null,
+      "outputSchema": null,
+    },
+    "./sections/GridCategory.tsx": {
+      "inputSchema": {
+        "title": " Grid Category",
+        "type": "object",
+        "properties": {
+          "gridItem": {
+            "type": "array",
+            "items": {
+              "title": "GridCategoryProps",
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "title": "Title",
+                },
+                "link": {
+                  "type": "string",
+                  "title": "Link",
+                },
+                "imageMobile": {
+                  "format": "image-uri",
+                  "type": "string",
+                  "title": "Image Mobile",
+                },
+                "imageDesktop": {
+                  "format": "image-uri",
+                  "type": "string",
+                  "title": "Image Desktop",
+                },
+              },
+              "required": [
+                "title",
+                "link",
+                "imageMobile",
+              ],
+            },
+            "title": "Grid Item",
+          },
+          "allCategories": {
+            "type": "string",
+            "title": "All Categories",
+          },
+        },
+        "required": [
+          "gridItem",
+          "allCategories",
+        ],
+      },
       "outputSchema": null,
     },
     "./sections/Head.tsx": {
