@@ -41,7 +41,6 @@ export default function Cart() {
       >
         <Icon name="ShoppingCart" className="w-8 h-8" />
       </button>
-      
     </div>
   );
 }
