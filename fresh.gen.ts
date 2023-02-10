@@ -17,12 +17,13 @@ import * as $$$1 from "./sections/Benefits.tsx";
 import * as $$$2 from "./sections/Footer.tsx";
 import * as $$$3 from "./sections/GridCategory.tsx";
 import * as $$$4 from "./sections/Head.tsx";
-import * as $$$5 from "./sections/Home.tsx";
-import * as $$$6 from "./sections/MattressSize.tsx";
-import * as $$$7 from "./sections/ProductDetails.tsx";
-import * as $$$8 from "./sections/ProductShelf.tsx";
-import * as $$$9 from "./sections/TalkToSpecialist.tsx";
-import * as $$$10 from "./sections/TypesMattresses.tsx";
+import * as $$$5 from "./sections/Header.tsx";
+import * as $$$6 from "./sections/Home.tsx";
+import * as $$$7 from "./sections/MattressSize.tsx";
+import * as $$$8 from "./sections/ProductDetails.tsx";
+import * as $$$9 from "./sections/ProductShelf.tsx";
+import * as $$$10 from "./sections/TalkToSpecialist.tsx";
+import * as $$$11 from "./sections/TypesMattresses.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$1 from "./functions/vtexProductDetailsPage.ts";
 import * as $$$$2 from "./functions/vtexProductList.ts";
@@ -47,12 +48,13 @@ const manifest: DecoManifest = {
     "./sections/Footer.tsx": $$$2,
     "./sections/GridCategory.tsx": $$$3,
     "./sections/Head.tsx": $$$4,
-    "./sections/Home.tsx": $$$5,
-    "./sections/MattressSize.tsx": $$$6,
-    "./sections/ProductDetails.tsx": $$$7,
-    "./sections/ProductShelf.tsx": $$$8,
-    "./sections/TalkToSpecialist.tsx": $$$9,
-    "./sections/TypesMattresses.tsx": $$$10,
+    "./sections/Header.tsx": $$$5,
+    "./sections/Home.tsx": $$$6,
+    "./sections/MattressSize.tsx": $$$7,
+    "./sections/ProductDetails.tsx": $$$8,
+    "./sections/ProductShelf.tsx": $$$9,
+    "./sections/TalkToSpecialist.tsx": $$$10,
+    "./sections/TypesMattresses.tsx": $$$11,
   },
   functions: {
     "./functions/LoadGitHubRaw.ts": $$$$0,
@@ -228,6 +230,28 @@ const manifest: DecoManifest = {
           "faviconUrl",
           "styleUrls",
           "themeColor",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Header.tsx": {
+      "inputSchema": {
+        "title": " Header",
+        "type": "object",
+        "properties": {
+          "logo": {
+            "format": "image-uri",
+            "type": "string",
+            "title": "Logo",
+          },
+          "whatsappLink": {
+            "type": "string",
+            "title": "Whatsapp Link",
+          },
+        },
+        "required": [
+          "logo",
+          "whatsappLink",
         ],
       },
       "outputSchema": null,
