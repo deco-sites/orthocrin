@@ -6,7 +6,7 @@ interface LogoProps {
 
 export function Logo({ logo }: LogoProps) {
   return (
-    <div className="w-[165px] h-[30px]">
+    <div className="w-full h-full">
       <a href="/">
         <img src={logo} alt="Logo" className="w-full h-full" />
       </a>
