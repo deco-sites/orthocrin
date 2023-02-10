@@ -4,7 +4,8 @@ import { Nav } from "$components/header/Nav/index.tsx";
 import { Search } from "$components/header/Search/index.tsx";
 
 import type { Image } from "$live/std/ui/types/Image.ts";
-import { Buttons } from "../components/header/Buttons/index.tsx";
+import { Buttons } from "$components/header/Buttons/index.tsx";
+import { Categories } from "$components/header/Categories/index.tsx";
 
 export interface Props {
   logo: Image;
@@ -13,8 +14,8 @@ export interface Props {
 
 export default function Header({ logo, whatsappLink }: Props) {
   return (
-    <header className="flex flex-col py-5 px-6">
-      <div id="header-mobile" className="flex flex-col lg:hidden">
+    <header className="flex flex-col py-5 px-0">
+      <div id="header-mobile" className="flex flex-col px-6 lg:hidden">
         <div className="flex items-center justify-between gap-3">
           <MenuBurguerIcon />
           <div className="w-[165px] h-[30px]">
@@ -33,7 +34,7 @@ export default function Header({ logo, whatsappLink }: Props) {
       </div>
 
       <div id="header-desktop" className="hidden lg:flex flex-col w-full">
-        <div className="flex items-center gap-8 pb-6 border-b-1 border-gray-100">
+        <div className="flex items-center gap-8 pb-6 border-b-1 border-gray-100 px-6">
           <div className="w-[292px] h-[53px] ml-6">
             <Logo logo={logo} />
           </div>
@@ -47,8 +48,12 @@ export default function Header({ logo, whatsappLink }: Props) {
           </div>
         </div>
 
-        <div className="flex">
+        <div className="flex px-6">
           <Buttons />
+        </div>
+
+        <div className="flex w-full mt-4">
+          <Categories />
         </div>
       </div>
     </header>

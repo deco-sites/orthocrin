@@ -20,7 +20,10 @@ export function Nav({ whatsappLink }: NavProps) {
             0
           </span>
         </div>
-        <img className="w-full h-full" src="https://orthocrin.vteximg.com.br/arquivos/cart.svg" />
+        <img
+          className="w-full h-full"
+          src="https://orthocrin.vteximg.com.br/arquivos/cart.svg"
+        />
       </div>
     </div>
   );
