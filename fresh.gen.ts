@@ -9,9 +9,10 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/AddToCart.tsx";
-import * as $$1 from "./islands/LiveControls.tsx";
-import * as $$2 from "./islands/Minicart.tsx";
-import * as $$3 from "./islands/ProductInformation.tsx";
+import * as $$1 from "./islands/HeaderMobile.tsx";
+import * as $$2 from "./islands/LiveControls.tsx";
+import * as $$3 from "./islands/Minicart.tsx";
+import * as $$4 from "./islands/ProductInformation.tsx";
 import * as $$$0 from "./sections/BeFranchisor.tsx";
 import * as $$$1 from "./sections/Benefits.tsx";
 import * as $$$2 from "./sections/Footer.tsx";
@@ -38,9 +39,10 @@ const manifest: DecoManifest = {
   },
   islands: {
     "./islands/AddToCart.tsx": $$0,
-    "./islands/LiveControls.tsx": $$1,
-    "./islands/Minicart.tsx": $$2,
-    "./islands/ProductInformation.tsx": $$3,
+    "./islands/HeaderMobile.tsx": $$1,
+    "./islands/LiveControls.tsx": $$2,
+    "./islands/Minicart.tsx": $$3,
+    "./islands/ProductInformation.tsx": $$4,
   },
   sections: {
     "./sections/BeFranchisor.tsx": $$$0,

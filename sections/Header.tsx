@@ -8,6 +8,9 @@ import { Buttons } from "$components/header/Buttons/index.tsx";
 import { Categories } from "$components/header/Categories/index.tsx";
 import { MobileSidebarMenu } from "../components/header/MobileSidebarMenu/index.tsx";
 
+import { useEffect, useState } from "preact/hooks";
+import HeaderMobile from "../islands/HeaderMobile.tsx";
+
 export interface Props {
   logo: Image;
   whatsappLink: string;
@@ -16,28 +19,9 @@ export interface Props {
 export default function Header({ logo, whatsappLink }: Props) {
   return (
     <header className="flex flex-col pt-5 px-0 fixed top-0 bg-white w-full z-10">
-      <div id="header-mobile" className="flex flex-col lg:hidden">
-        <div className="flex items-center justify-between gap-3 px-6">
-          <MenuBurguerIcon />
-          <div className="w-[165px] h-[30px]">
-            <Logo logo={logo} />
-          </div>
-          <Nav whatsappLink={whatsappLink} />
-        </div>
+      <HeaderMobile logo={logo} whatsappLink={whatsappLink} />
 
-        <div className="flex w-full mt-3.5 px-6 pb-5">
-          <Search />
-        </div>
-
-        <div className="bg-red-900 w-full h-[calc(100vh-124px)]">
-          <MobileSidebarMenu />
-        </div>
-      </div>
-
-      <div
-        id="header-desktop"
-        className="hidden lg:flex flex-wrap w-full items-center gap-8"
-      >
+      <div id="header-desktop" className="hidden lg:flex flex-wrap w-full items-center gap-8">
         <div className="w-[292px] h-[53px] ml-6 order-1">
           <Logo logo={logo} />
         </div>
