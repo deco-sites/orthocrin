@@ -1,4 +1,6 @@
-export const VTEX_ACCOUNT = `footerlucaslima--dailuslab`;
+import { defaultVTEXSettings } from "../instances.ts";
+
+export const VTEX_ACCOUNT = defaultVTEXSettings.account;
 
 // Params copied from https://github.com/vtex-apps/checkout-graphql/blob/d388e175b92903ffdf479933e7258a1539baca6e/node/clients/checkout.ts#L46
 // TODO: Import types from VTEX IO clients (pretty sure it's all there in npm)

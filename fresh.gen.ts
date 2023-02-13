@@ -9,20 +9,24 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/AddToCart.tsx";
-import * as $$1 from "./islands/LiveControls.tsx";
-import * as $$2 from "./islands/Minicart.tsx";
-import * as $$3 from "./islands/ProductInformation.tsx";
+import * as $$1 from "./islands/HeaderDesktop.tsx";
+import * as $$2 from "./islands/HeaderMobile.tsx";
+import * as $$3 from "./islands/LiveControls.tsx";
+import * as $$4 from "./islands/Minicart.tsx";
+import * as $$5 from "./islands/MobileSidebarMenu.tsx";
+import * as $$6 from "./islands/ProductInformation.tsx";
 import * as $$$0 from "./sections/BeFranchisor.tsx";
 import * as $$$1 from "./sections/Benefits.tsx";
 import * as $$$2 from "./sections/Footer.tsx";
 import * as $$$3 from "./sections/GridCategory.tsx";
 import * as $$$4 from "./sections/Head.tsx";
-import * as $$$5 from "./sections/Home.tsx";
-import * as $$$6 from "./sections/MattressSize.tsx";
-import * as $$$7 from "./sections/ProductDetails.tsx";
-import * as $$$8 from "./sections/ProductShelf.tsx";
-import * as $$$9 from "./sections/TalkToSpecialist.tsx";
-import * as $$$10 from "./sections/TypesMattresses.tsx";
+import * as $$$5 from "./sections/Header.tsx";
+import * as $$$6 from "./sections/Home.tsx";
+import * as $$$7 from "./sections/MattressSize.tsx";
+import * as $$$8 from "./sections/ProductDetails.tsx";
+import * as $$$9 from "./sections/ProductShelf.tsx";
+import * as $$$10 from "./sections/TalkToSpecialist.tsx";
+import * as $$$11 from "./sections/TypesMattresses.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$1 from "./functions/vtexProductDetailsPage.ts";
 import * as $$$$2 from "./functions/vtexProductList.ts";
@@ -37,9 +41,12 @@ const manifest: DecoManifest = {
   },
   islands: {
     "./islands/AddToCart.tsx": $$0,
-    "./islands/LiveControls.tsx": $$1,
-    "./islands/Minicart.tsx": $$2,
-    "./islands/ProductInformation.tsx": $$3,
+    "./islands/HeaderDesktop.tsx": $$1,
+    "./islands/HeaderMobile.tsx": $$2,
+    "./islands/LiveControls.tsx": $$3,
+    "./islands/Minicart.tsx": $$4,
+    "./islands/MobileSidebarMenu.tsx": $$5,
+    "./islands/ProductInformation.tsx": $$6,
   },
   sections: {
     "./sections/BeFranchisor.tsx": $$$0,
@@ -47,12 +54,13 @@ const manifest: DecoManifest = {
     "./sections/Footer.tsx": $$$2,
     "./sections/GridCategory.tsx": $$$3,
     "./sections/Head.tsx": $$$4,
-    "./sections/Home.tsx": $$$5,
-    "./sections/MattressSize.tsx": $$$6,
-    "./sections/ProductDetails.tsx": $$$7,
-    "./sections/ProductShelf.tsx": $$$8,
-    "./sections/TalkToSpecialist.tsx": $$$9,
-    "./sections/TypesMattresses.tsx": $$$10,
+    "./sections/Header.tsx": $$$5,
+    "./sections/Home.tsx": $$$6,
+    "./sections/MattressSize.tsx": $$$7,
+    "./sections/ProductDetails.tsx": $$$8,
+    "./sections/ProductShelf.tsx": $$$9,
+    "./sections/TalkToSpecialist.tsx": $$$10,
+    "./sections/TypesMattresses.tsx": $$$11,
   },
   functions: {
     "./functions/LoadGitHubRaw.ts": $$$$0,
@@ -228,6 +236,92 @@ const manifest: DecoManifest = {
           "faviconUrl",
           "styleUrls",
           "themeColor",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Header.tsx": {
+      "inputSchema": {
+        "title": " Header",
+        "type": "object",
+        "properties": {
+          "logo": {
+            "format": "image-uri",
+            "type": "string",
+            "title": "Logo",
+          },
+          "whatsappLink": {
+            "type": "string",
+            "title": "Whatsapp Link",
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "title": "HeaderCategory",
+              "type": "object",
+              "properties": {
+                "imageUrl": {
+                  "type": "string",
+                  "title": "Image Url",
+                },
+                "label": {
+                  "type": "string",
+                  "title": "Label",
+                },
+                "columns": {
+                  "type": "array",
+                  "items": {
+                    "title": "CategoryColumns",
+                    "type": "object",
+                    "properties": {
+                      "columnTitle": {
+                        "type": "string",
+                        "title": "Column Title",
+                      },
+                      "columnItems": {
+                        "type": "array",
+                        "items": {
+                          "title": "CategoryLink",
+                          "type": "object",
+                          "properties": {
+                            "label": {
+                              "type": "string",
+                              "title": "Label",
+                            },
+                            "link": {
+                              "type": "string",
+                              "title": "Link",
+                            },
+                          },
+                          "required": [
+                            "label",
+                            "link",
+                          ],
+                        },
+                        "title": "Column Items",
+                      },
+                    },
+                    "required": [
+                      "columnTitle",
+                      "columnItems",
+                    ],
+                  },
+                  "title": "Columns",
+                },
+              },
+              "required": [
+                "imageUrl",
+                "label",
+                "columns",
+              ],
+            },
+            "title": "Categories",
+          },
+        },
+        "required": [
+          "logo",
+          "whatsappLink",
+          "categories",
         ],
       },
       "outputSchema": null,
