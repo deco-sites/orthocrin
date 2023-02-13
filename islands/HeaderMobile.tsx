@@ -4,18 +4,18 @@ import { Nav } from "$components/header/Nav/index.tsx";
 import { Search } from "$components/header/Search/index.tsx";
 
 import type { Image } from "$live/std/ui/types/Image.ts";
-import { MobileSidebarMenu } from "../components/header/MobileSidebarMenu/index.tsx";
+import MobileSidebarMenu from "./MobileSidebarMenu.tsx";
 
 import { useEffect, useState } from "preact/hooks";
+import { HeaderCategory } from "../types/Category.ts";
 
 export interface HeaderMobileProps {
   logo: Image;
   whatsappLink: string;
+  categories: HeaderCategory[];
 }
 
-export default function HeaderMobile(
-  { logo, whatsappLink }: HeaderMobileProps,
-) {
+export default function HeaderMobile({ logo, whatsappLink, categories }: HeaderMobileProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -34,11 +34,9 @@ export default function HeaderMobile(
         <Search />
       </div>
 
-      {isMobileMenuOpen && (
-        <div className="bg-red-900 w-full h-[calc(100vh-124px)]">
-          <MobileSidebarMenu />
-        </div>
-      )}
+      <div className="bg-red-900 w-full h-[calc(100vh-124px)]">
+        <MobileSidebarMenu categories={categories} />
+      </div>
     </div>
   );
 }

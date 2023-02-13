@@ -9,10 +9,12 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/AddToCart.tsx";
-import * as $$1 from "./islands/HeaderMobile.tsx";
-import * as $$2 from "./islands/LiveControls.tsx";
-import * as $$3 from "./islands/Minicart.tsx";
-import * as $$4 from "./islands/ProductInformation.tsx";
+import * as $$1 from "./islands/HeaderDesktop.tsx";
+import * as $$2 from "./islands/HeaderMobile.tsx";
+import * as $$3 from "./islands/LiveControls.tsx";
+import * as $$4 from "./islands/Minicart.tsx";
+import * as $$5 from "./islands/MobileSidebarMenu.tsx";
+import * as $$6 from "./islands/ProductInformation.tsx";
 import * as $$$0 from "./sections/BeFranchisor.tsx";
 import * as $$$1 from "./sections/Benefits.tsx";
 import * as $$$2 from "./sections/Footer.tsx";
@@ -39,10 +41,12 @@ const manifest: DecoManifest = {
   },
   islands: {
     "./islands/AddToCart.tsx": $$0,
-    "./islands/HeaderMobile.tsx": $$1,
-    "./islands/LiveControls.tsx": $$2,
-    "./islands/Minicart.tsx": $$3,
-    "./islands/ProductInformation.tsx": $$4,
+    "./islands/HeaderDesktop.tsx": $$1,
+    "./islands/HeaderMobile.tsx": $$2,
+    "./islands/LiveControls.tsx": $$3,
+    "./islands/Minicart.tsx": $$4,
+    "./islands/MobileSidebarMenu.tsx": $$5,
+    "./islands/ProductInformation.tsx": $$6,
   },
   sections: {
     "./sections/BeFranchisor.tsx": $$$0,
@@ -250,10 +254,74 @@ const manifest: DecoManifest = {
             "type": "string",
             "title": "Whatsapp Link",
           },
+          "categories": {
+            "type": "array",
+            "items": {
+              "title": "HeaderCategory",
+              "type": "object",
+              "properties": {
+                "imageUrl": {
+                  "type": "string",
+                  "title": "Image Url",
+                },
+                "label": {
+                  "type": "string",
+                  "title": "Label",
+                },
+                "columns": {
+                  "type": "array",
+                  "items": {
+                    "title": "CategoryColumns",
+                    "type": "object",
+                    "properties": {
+                      "columnTitle": {
+                        "type": "string",
+                        "title": "Column Title",
+                      },
+                      "columnItems": {
+                        "type": "array",
+                        "items": {
+                          "title": "CategoryLink",
+                          "type": "object",
+                          "properties": {
+                            "label": {
+                              "type": "string",
+                              "title": "Label",
+                            },
+                            "link": {
+                              "type": "string",
+                              "title": "Link",
+                            },
+                          },
+                          "required": [
+                            "label",
+                            "link",
+                          ],
+                        },
+                        "title": "Column Items",
+                      },
+                    },
+                    "required": [
+                      "columnTitle",
+                      "columnItems",
+                    ],
+                  },
+                  "title": "Columns",
+                },
+              },
+              "required": [
+                "imageUrl",
+                "label",
+                "columns",
+              ],
+            },
+            "title": "Categories",
+          },
         },
         "required": [
           "logo",
           "whatsappLink",
+          "categories",
         ],
       },
       "outputSchema": null,
