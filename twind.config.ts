@@ -14,6 +14,7 @@ export default {
         primary: "#2FD180",
         "primary-dark": "#003232",
         "primary-light": "#C5FFE9",
+        "orthocrin-green": "#28b440",
         transparent: "transparent",
       },
       fontFamily: {

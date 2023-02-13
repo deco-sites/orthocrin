@@ -15,13 +15,11 @@ export interface HeaderMobileProps {
   categories: HeaderCategory[];
 }
 
-export default function HeaderMobile(
-  { logo, whatsappLink, categories }: HeaderMobileProps,
-) {
+export default function HeaderMobile({ logo, whatsappLink, categories }: HeaderMobileProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div id="header-mobile" className="flex flex-col lg:hidden">
+    <div id="header-mobile" className="flex flex-col lg:hidden sticky top-0 bg-white">
       <div className="flex items-center justify-between gap-3 px-6">
         <button onClick={() => setIsMobileMenuOpen((current) => !current)}>
           <MenuBurguerIcon />
@@ -36,9 +34,11 @@ export default function HeaderMobile(
         <Search />
       </div>
 
-      <div className="bg-red-900 w-full h-[calc(100vh-124px)]">
-        <MobileSidebarMenu categories={categories} />
-      </div>
+      {isMobileMenuOpen && (
+        <div className="bg-red-900 w-full h-[calc(100vh-124px)]">
+          <MobileSidebarMenu categories={categories} />
+        </div>
+      )}
     </div>
   );
 }
