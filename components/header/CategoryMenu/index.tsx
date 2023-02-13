@@ -17,7 +17,9 @@ export function CategoryMenu({ category }: CategoryMenuProps) {
       <div className="flex flex-col lg:flex-row gap-[50px]">
         {category?.columns?.map((column) => (
           <div className="flex flex-col gap-4">
-            <p className="text-red-600 flex whitespace-nowrap mt-2">{column?.columnTitle ?? ""}</p>
+            <p className="text-red-600 flex whitespace-nowrap mt-2">
+              {column?.columnTitle ?? ""}
+            </p>
 
             {column?.columnItems?.map((columnItem) => (
               <a href="/" className="text-sm text-gray-500">

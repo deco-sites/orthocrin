@@ -7,8 +7,12 @@ interface MobileSidebarMenuProps {
   categories: HeaderCategory[];
 }
 
-export default function MobileSidebarMenu({ categories }: MobileSidebarMenuProps) {
-  const [selectedCategory, setSelectedCategory] = useState<HeaderCategory>(categories[0]);
+export default function MobileSidebarMenu(
+  { categories }: MobileSidebarMenuProps,
+) {
+  const [selectedCategory, setSelectedCategory] = useState<HeaderCategory>(
+    categories[0],
+  );
 
   const handleCategoryClick = (category: HeaderCategory) => {
     setSelectedCategory(category);
@@ -16,7 +20,10 @@ export default function MobileSidebarMenu({ categories }: MobileSidebarMenuProps
 
   return (
     <div className="flex flex-grow-1 bg-white h-full w-screen">
-      <div id="options" className="flex flex-col w-1/4 h-full overflow-y-scroll overflow-x-hidden">
+      <div
+        id="options"
+        className="flex flex-col w-1/4 h-full overflow-y-scroll overflow-x-hidden"
+      >
         <Categories
           categories={categories}
           selectedCategory={selectedCategory}
@@ -24,7 +31,10 @@ export default function MobileSidebarMenu({ categories }: MobileSidebarMenuProps
         />
       </div>
 
-      <div id="content" className="flex-grow-1 py-5 px-4 w-auto h-full overflow-x-hidden">
+      <div
+        id="content"
+        className="flex-grow-1 py-5 px-4 w-auto h-full overflow-x-hidden"
+      >
         <CategoryMenu category={selectedCategory} />
       </div>
     </div>

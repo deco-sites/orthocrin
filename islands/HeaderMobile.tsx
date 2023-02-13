@@ -15,7 +15,9 @@ export interface HeaderMobileProps {
   categories: HeaderCategory[];
 }
 
-export default function HeaderMobile({ logo, whatsappLink, categories }: HeaderMobileProps) {
+export default function HeaderMobile(
+  { logo, whatsappLink, categories }: HeaderMobileProps,
+) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (

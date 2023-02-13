@@ -14,7 +14,9 @@ export function Categories({
   handleSelectCategory,
   selectedCategory,
 }: CategoriesProps) {
-  const [desktopSelectedCategory, setDesktopSelectedCategory] = useState(categories[0]);
+  const [desktopSelectedCategory, setDesktopSelectedCategory] = useState(
+    categories[0],
+  );
 
   const handleDesktopSelectCategory = (category: HeaderCategory) => {
     setDesktopSelectedCategory(category);
@@ -27,11 +29,14 @@ export function Categories({
           key={item.label}
           className={`relative flex group hover:bg-red-600 flex-col items-center justify-center w-[109px] h-[93px] cursor-pointer ease duration-200`}
           onClick={() =>
-            handleSelectCategory ? handleSelectCategory(item) : handleDesktopSelectCategory(item)
-          }
+            handleSelectCategory
+              ? handleSelectCategory(item)
+              : handleDesktopSelectCategory(item)}
         >
           <img className="w-[30px] h-[40px]" src={item.imageUrl} />
-          <span className={`flex flex-nowrap group-hover:text-white text-xs lg:text-sm mt-1`}>
+          <span
+            className={`flex flex-nowrap group-hover:text-white text-xs lg:text-sm mt-1`}
+          >
             {item.label}
           </span>
 
