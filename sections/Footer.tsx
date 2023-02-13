@@ -15,20 +15,20 @@ function Footer({ footerLinks }: Props) {
   const border = { "border-bottom": "2px solid #ececec" };
   const style = {
     boxShadow: "0 0 14px 0 #00000024",
-    "padding": "Min(7%,25px)",
+    padding: "Min(7%,25px)",
     "max-width": "295px",
   };
   const grid = {
     "border-bottom": "2px solid #ececec",
     "column-gap": "25px",
-    "display": "grid",
+    display: "grid",
     "grid-template-columns": " 50% 50%",
     "grid-template-rows": "auto",
-    "padding": "45px 25px",
+    padding: "45px 25px",
     "row-gap": "35px",
   };
   return (
-    <div>
+    <div className="overflow-hidden">
       <div class="px-[1rem]">
         <img src="/logo-footer.png" alt="Logo footer" />
       </div>
