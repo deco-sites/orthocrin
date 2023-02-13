@@ -10,7 +10,9 @@ export function CategoryMenu() {
 
       <div className="flex flex-col lg:flex-row gap-[50px]">
         <div className="flex flex-col gap-4">
-          <p className="text-red-600 flex whitespace-nowrap mt-2">Escolha por tipo</p>
+          <p className="text-red-600 flex whitespace-nowrap mt-2">
+            Escolha por tipo
+          </p>
 
           <a href="/" className="text-sm text-gray-500">
             Mola
@@ -24,7 +26,9 @@ export function CategoryMenu() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <p className="text-red-600 flex whitespace-nowrap mt-2">Escolha por tamanho</p>
+          <p className="text-red-600 flex whitespace-nowrap mt-2">
+            Escolha por tamanho
+          </p>
 
           <a href="/" className="text-sm text-gray-500">
             Casal
@@ -47,7 +51,9 @@ export function CategoryMenu() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <p className="text-red-600 flex whitespace-nowrap mt-2">Linhas especiais</p>
+          <p className="text-red-600 flex whitespace-nowrap mt-2">
+            Linhas especiais
+          </p>
 
           <a href="/" className="text-sm text-gray-500">
             Moush - Colchão na caixa

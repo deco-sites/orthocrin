@@ -34,7 +34,10 @@ export default function Header({ logo, whatsappLink }: Props) {
         </div>
       </div>
 
-      <div id="header-desktop" className="hidden lg:flex flex-wrap w-full items-center gap-8">
+      <div
+        id="header-desktop"
+        className="hidden lg:flex flex-wrap w-full items-center gap-8"
+      >
         <div className="w-[292px] h-[53px] ml-6 order-1">
           <Logo logo={logo} />
         </div>
