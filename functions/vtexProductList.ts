@@ -3,7 +3,7 @@ import { toProduct } from "$live/std/commerce/vtex/transform.ts";
 import type { Product } from "$live/std/commerce/types.ts";
 import type { LoaderFunction } from "$live/std/types.ts";
 
-import { vtex } from "../clients/instances.ts";
+import { defaultVTEXSettings, vtex } from "../clients/instances.ts";
 
 export interface Props {
   /** @description query to use on search */
@@ -18,7 +18,7 @@ export interface Props {
  */
 const productListLoader: LoaderFunction<Props, Product[]> = async (
   _req,
-  _ctx,
+  ctx,
   props,
 ) => {
   const count = props.count ?? 12;
@@ -28,7 +28,7 @@ const productListLoader: LoaderFunction<Props, Product[]> = async (
     query,
     page: 0,
     count,
-    account: "footerlucaslima--dailuslab",
+    ...(ctx.state.global.vtexconfig ?? defaultVTEXSettings),
   };
 
   // search prodcuts on VTEX. Feel free to change any of these parameters
