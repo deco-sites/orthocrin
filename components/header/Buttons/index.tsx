@@ -4,21 +4,24 @@ const buttons = [
     label: "(31)9838-6838",
     href: "/",
     iconUrl: "https://orthocrin.vteximg.com.br/arquivos/whatsapp-icon.png",
-    iconUrlHover: "https://orthocrin.vteximg.com.br/arquivos/whatsapp-white-icon.png",
+    iconUrlHover:
+      "https://orthocrin.vteximg.com.br/arquivos/whatsapp-white-icon.png",
   },
   {
     id: "nossas-lojas",
     label: "Nossas Lojas",
     href: "/",
     iconUrl: "https://orthocrin.vteximg.com.br/arquivos/stores-icon.png",
-    iconUrlHover: "https://orthocrin.vteximg.com.br/arquivos/stores-white-icon.png",
+    iconUrlHover:
+      "https://orthocrin.vteximg.com.br/arquivos/stores-white-icon.png",
   },
   {
     id: "seja-franqueado",
     label: "Seja um franqueado",
     href: "/",
     iconUrl: "https://orthocrin.vteximg.com.br/arquivos/franchisee-icon.png",
-    iconUrlHover: "https://orthocrin.vteximg.com.br/arquivos/franchisee-white-icon.png",
+    iconUrlHover:
+      "https://orthocrin.vteximg.com.br/arquivos/franchisee-white-icon.png",
   },
 ];
 
@@ -35,8 +38,14 @@ export function Buttons() {
             href={item.href}
             className="no-underline font-bold flex items-center justify-center gap-2 w-full"
           >
-            <img className="w-[18px] h-[18px] flex group-hover:hidden" src={item.iconUrl} />
-            <img className="w-[18px] h-[18px] hidden group-hover:flex" src={item.iconUrlHover} />
+            <img
+              className="w-[18px] h-[18px] flex group-hover:hidden"
+              src={item.iconUrl}
+            />
+            <img
+              className="w-[18px] h-[18px] hidden group-hover:flex"
+              src={item.iconUrlHover}
+            />
             {item.label}
           </a>
         </div>
@@ -54,7 +63,9 @@ export function Buttons() {
           className="w-[18px] h-[18px] hidden group-hover:flex"
           src="https://orthocrin.vteximg.com.br/arquivos/account-white-icon.png"
         />
-        <span className="font-bold text-red-600 group-hover:text-white">Minha Conta</span>
+        <span className="font-bold text-red-600 group-hover:text-white">
+          Minha Conta
+        </span>
         <div className="w-[18px] h-[18px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +75,11 @@ export function Buttons() {
             stroke="currentColor"
             class="w-4 h-4 text-red-600 group-hover:text-white"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
           </svg>
         </div>
 
@@ -72,7 +87,10 @@ export function Buttons() {
           id="my-account-dropdown-menu"
           className="hidden group-hover:flex hover:flex flex-col gap-5 py-5 px-10 absolute top-8 left-0 bg-white rounded-md shadow-md"
         >
-          <a href="/" className="text-red-600 font-bold text-sm whitespace-nowrap underline">
+          <a
+            href="/"
+            className="text-red-600 font-bold text-sm whitespace-nowrap underline"
+          >
             Entrar
           </a>
           <a href="/" className="text-sm whitespace-nowrap underline">
