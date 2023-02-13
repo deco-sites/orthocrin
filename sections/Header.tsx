@@ -6,6 +6,7 @@ import { Search } from "$components/header/Search/index.tsx";
 import type { Image } from "$live/std/ui/types/Image.ts";
 import { Buttons } from "$components/header/Buttons/index.tsx";
 import { Categories } from "$components/header/Categories/index.tsx";
+import { MobileSidebarMenu } from "../components/header/MobileSidebarMenu/index.tsx";
 
 export interface Props {
   logo: Image;
@@ -14,9 +15,9 @@ export interface Props {
 
 export default function Header({ logo, whatsappLink }: Props) {
   return (
-    <header className="flex flex-col py-5 px-0 sticky top-1 bg-white w-full z-10">
-      <div id="header-mobile" className="flex flex-col px-6 lg:hidden">
-        <div className="flex items-center justify-between gap-3">
+    <header className="flex flex-col pt-5 px-0 fixed top-0 bg-white w-full z-10">
+      <div id="header-mobile" className="flex flex-col lg:hidden">
+        <div className="flex items-center justify-between gap-3 px-6">
           <MenuBurguerIcon />
           <div className="w-[165px] h-[30px]">
             <Logo logo={logo} />
@@ -24,19 +25,16 @@ export default function Header({ logo, whatsappLink }: Props) {
           <Nav whatsappLink={whatsappLink} />
         </div>
 
-        <div className="flex w-full mt-3.5">
+        <div className="flex w-full mt-3.5 px-6 pb-5">
           <Search />
         </div>
 
-        <div className="hidden lg:flex">
-          <Buttons />
+        <div className="bg-red-900 w-full h-[calc(100vh-124px)]">
+          <MobileSidebarMenu />
         </div>
       </div>
 
-      <div
-        id="header-desktop"
-        className="hidden lg:flex flex-wrap w-full items-center gap-8"
-      >
+      <div id="header-desktop" className="hidden lg:flex flex-wrap w-full items-center gap-8">
         <div className="w-[292px] h-[53px] ml-6 order-1">
           <Logo logo={logo} />
         </div>
