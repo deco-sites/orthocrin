@@ -27,7 +27,7 @@ const buttons = [
 
 export function Buttons() {
   return (
-    <div className="flex gap-3 pt-4">
+    <div className="flex gap-3">
       {buttons.map((item) => (
         <div
           key={item.id}

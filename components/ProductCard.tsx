@@ -34,6 +34,10 @@ export default function ProductCard({
     Math.trunc(Math.max(1 - price / listPrice.price, 0) * 100);
   const installment = offer?.priceSpecification.reduce(bestInstallment, null);
 
+  const hasVariant = isVariantOf?.hasVariant;
+
+  // console.log({ hasVariant });
+
   return (
     <div
       id={`product-card-${productID}`}

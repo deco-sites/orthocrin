@@ -33,7 +33,9 @@ function TalkToSpecialist({ benefits, linkSpecialist }: Props) {
             <div class="flex items-start gap-[10px]">
               <img src={benefit.icon} alt={benefit.title} />
               <div class="flex flex-col w-auto">
-                <p class="text-[#0054b1] mb-2 font-bold flex w-auto">{benefit.title}</p>
+                <p class="text-[#0054b1] mb-2 font-bold flex w-auto">
+                  {benefit.title}
+                </p>
                 <p class="text-sm flex w-auto">{benefit.description}</p>
               </div>
             </div>
