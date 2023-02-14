@@ -1,5 +1,3 @@
-import { useEffect, useState } from "preact/hooks";
-
 const buttons = [
   {
     id: "whatsapp",
@@ -28,24 +26,8 @@ const buttons = [
 ];
 
 export function Buttons() {
-  const [showMyAccountDropdownMenu, setShowMyAccountDropdownMenu] = useState(
-    false,
-  );
-
-  const handleShowMyAccountDropdownMenu = () => {
-    setShowMyAccountDropdownMenu(true);
-  };
-
-  const handleHideMyAccountDropdownMenu = () => {
-    setShowMyAccountDropdownMenu(false);
-  };
-
-  useEffect(() => {
-    console.log({ showMyAccountDropdownMenu });
-  }, [showMyAccountDropdownMenu]);
-
   return (
-    <div className="flex gap-3 pt-4">
+    <div className="flex gap-3">
       {buttons.map((item) => (
         <div
           key={item.id}
@@ -72,7 +54,6 @@ export function Buttons() {
       <div
         id="minha-conta"
         className="relative group px-2 py-1 border-1 border-red-600 rounded-md flex items-center gap-2 cursor-pointer hover:bg-red-600 ease duration-200"
-        onClick={handleShowMyAccountDropdownMenu}
       >
         <img
           className="w-[18px] h-[18px] flex group-hover:hidden"
@@ -105,7 +86,6 @@ export function Buttons() {
         <div
           id="my-account-dropdown-menu"
           className="hidden group-hover:flex hover:flex flex-col gap-5 py-5 px-10 absolute top-8 left-0 bg-white rounded-md shadow-md"
-          onMouseLeave={handleHideMyAccountDropdownMenu}
         >
           <a
             href="/"
