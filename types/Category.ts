@@ -1,6 +1,7 @@
 export interface CategoryLink {
   label: string;
   link: string;
+  popular?: boolean;
 }
 
 export interface CategoryColumns {

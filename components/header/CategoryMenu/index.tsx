@@ -16,14 +16,21 @@ export function CategoryMenu({ category }: CategoryMenuProps) {
 
       <div className="flex flex-col lg:flex-row gap-[50px]">
         {category?.columns?.map((column) => (
-          <div className="flex flex-col gap-4">
-            <p className="text-red-600 flex whitespace-nowrap mt-2">
-              {column?.columnTitle ?? ""}
-            </p>
+          <div className="flex flex-col gap-4 w-auto">
+            <p className="text-red-600 flex whitespace-nowrap mt-2">{column?.columnTitle ?? ""}</p>
 
             {column?.columnItems?.map((columnItem) => (
-              <a href="/" className="text-sm text-gray-500">
+              <a
+                href="/"
+                className="text-sm text-gray-500 flex items-center justify-between gap-5 w-auto border-b border-gray-100 whitespace-nowrap"
+              >
                 {columnItem?.label ?? ""}
+                {columnItem?.popular && (
+                  <p class="m-0 p-0 text-orthocrin-green flex items-center gap-1 whitespace-nowrap">
+                    <img class="w-2 h-2" src="https://www.orthocrin.com.br/arquivos/tag-star.svg" />
+                    Mais procurado!
+                  </p>
+                )}
               </a>
             ))}
           </div>

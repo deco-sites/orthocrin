@@ -12,9 +12,10 @@ import * as $$0 from "./islands/AddToCart.tsx";
 import * as $$1 from "./islands/HeaderDesktop.tsx";
 import * as $$2 from "./islands/HeaderMobile.tsx";
 import * as $$3 from "./islands/LiveControls.tsx";
-import * as $$4 from "./islands/Minicart.tsx";
-import * as $$5 from "./islands/MobileSidebarMenu.tsx";
-import * as $$6 from "./islands/ProductInformation.tsx";
+import * as $$4 from "./islands/MenuBurguer.tsx";
+import * as $$5 from "./islands/Minicart.tsx";
+import * as $$6 from "./islands/MobileSidebarMenu.tsx";
+import * as $$7 from "./islands/ProductInformation.tsx";
 import * as $$$0 from "./sections/BannerCarrousel.tsx";
 import * as $$$1 from "./sections/BeFranchisor.tsx";
 import * as $$$2 from "./sections/Benefits.tsx";
@@ -24,10 +25,11 @@ import * as $$$5 from "./sections/Head.tsx";
 import * as $$$6 from "./sections/Header.tsx";
 import * as $$$7 from "./sections/Home.tsx";
 import * as $$$8 from "./sections/MattressSize.tsx";
-import * as $$$9 from "./sections/ProductDetails.tsx";
-import * as $$$10 from "./sections/ProductShelf.tsx";
-import * as $$$11 from "./sections/TalkToSpecialist.tsx";
-import * as $$$12 from "./sections/TypesMattresses.tsx";
+import * as $$$9 from "./sections/Offers.tsx";
+import * as $$$10 from "./sections/ProductDetails.tsx";
+import * as $$$11 from "./sections/ProductShelf.tsx";
+import * as $$$12 from "./sections/TalkToSpecialist.tsx";
+import * as $$$13 from "./sections/TypesMattresses.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$1 from "./functions/vtexProductDetailsPage.ts";
 import * as $$$$2 from "./functions/vtexProductList.ts";
@@ -45,9 +47,10 @@ const manifest: DecoManifest = {
     "./islands/HeaderDesktop.tsx": $$1,
     "./islands/HeaderMobile.tsx": $$2,
     "./islands/LiveControls.tsx": $$3,
-    "./islands/Minicart.tsx": $$4,
-    "./islands/MobileSidebarMenu.tsx": $$5,
-    "./islands/ProductInformation.tsx": $$6,
+    "./islands/MenuBurguer.tsx": $$4,
+    "./islands/Minicart.tsx": $$5,
+    "./islands/MobileSidebarMenu.tsx": $$6,
+    "./islands/ProductInformation.tsx": $$7,
   },
   sections: {
     "./sections/BannerCarrousel.tsx": $$$0,
@@ -59,10 +62,11 @@ const manifest: DecoManifest = {
     "./sections/Header.tsx": $$$6,
     "./sections/Home.tsx": $$$7,
     "./sections/MattressSize.tsx": $$$8,
-    "./sections/ProductDetails.tsx": $$$9,
-    "./sections/ProductShelf.tsx": $$$10,
-    "./sections/TalkToSpecialist.tsx": $$$11,
-    "./sections/TypesMattresses.tsx": $$$12,
+    "./sections/Offers.tsx": $$$9,
+    "./sections/ProductDetails.tsx": $$$10,
+    "./sections/ProductShelf.tsx": $$$11,
+    "./sections/TalkToSpecialist.tsx": $$$12,
+    "./sections/TypesMattresses.tsx": $$$13,
   },
   functions: {
     "./functions/LoadGitHubRaw.ts": $$$$0,
@@ -298,6 +302,13 @@ const manifest: DecoManifest = {
                               "type": "string",
                               "title": "Link",
                             },
+                            "popular": {
+                              "type": [
+                                "boolean",
+                                "null",
+                              ],
+                              "title": "Popular",
+                            },
                           },
                           "required": [
                             "label",
@@ -338,6 +349,29 @@ const manifest: DecoManifest = {
     },
     "./sections/MattressSize.tsx": {
       "inputSchema": null,
+      "outputSchema": null,
+    },
+    "./sections/Offers.tsx": {
+      "inputSchema": {
+        "title": " Offers",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+          },
+          "products": {
+            "$id": "546cbd7d0ccd06d3cfddd3184a52c465c9b5139a",
+            "format": "live-function",
+            "type": "string",
+            "title": "Products",
+          },
+        },
+        "required": [
+          "title",
+          "products",
+        ],
+      },
       "outputSchema": null,
     },
     "./sections/ProductDetails.tsx": {
