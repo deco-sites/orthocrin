@@ -1,9 +1,4 @@
-import { useState } from "preact/hooks";
-
 export default function MenuBurguer() {
-  const [isOpen, setIsOpen] = useState(false);
-  const genericHamburgerLine = `h-1 w-6 my-[2px] rounded-full bg-black transition ease transform duration-300`;
-
   return (
     <div>
       <button class="relative group">

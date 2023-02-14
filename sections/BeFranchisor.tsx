@@ -20,12 +20,15 @@ function BeFranchisor({ link }: Props) {
           <div
             class="lg:hidden absolute right-0 bottom-[calc(100%-20px)] w-[96px] h-[96px]"
             style={{
-              backgroundImage: "url(https://orthocrin.vteximg.com.br/arquivos/about-badge.svg)",
+              backgroundImage:
+                "url(https://orthocrin.vteximg.com.br/arquivos/about-badge.svg)",
               backgroundSize: "contain",
             }}
           >
             <div class="flex flex-col items-center justify-center w-full h-full rotate-[-15deg]">
-              <span class="text-[#ed1c24] font-bold text-[46px] m-0 p-0 leading-10">58</span>
+              <span class="text-[#ed1c24] font-bold text-[46px] m-0 p-0 leading-10">
+                58
+              </span>
               <span class="font-bold text-lg uppercase">anos</span>
             </div>
           </div>
@@ -39,20 +42,30 @@ function BeFranchisor({ link }: Props) {
               }}
             />
             <div class="flex flex-col items-center justify-center w-full h-full rotate-[-15deg] z-10 absolute inset-0">
-              <span class="text-white font-bold text-[46px] m-0 p-0 leading-10">58</span>
-              <span class="font-bold text-lg uppercase text-yellow-500">anos</span>
+              <span class="text-white font-bold text-[46px] m-0 p-0 leading-10">
+                58
+              </span>
+              <span class="font-bold text-lg uppercase text-yellow-500">
+                anos
+              </span>
             </div>
           </div>
 
           <div class="bg-red-600 p-5 rounded-t-[10px]">
-            <img src="https://orthocrin.vteximg.com.br/arquivos/about-logo.svg" loading="lazy" />
+            <img
+              src="https://orthocrin.vteximg.com.br/arquivos/about-logo.svg"
+              loading="lazy"
+            />
           </div>
 
           <div class="flex flex-col items-center justify-center bg-white rounded-b-[10px] pt-[35px] px-6 pb-6">
             <p class="text-center m-0 p-0 text-black">
-              Com mais de <strong>57 anos de tradição</strong> e inovação, estamos entre as{" "}
-              <strong>maiores indústrias de colchões e acessórios do Brasil</strong> com foco em
-              promover um sono de saúde aos nossos clientes.
+              Com mais de <strong>57 anos de tradição</strong>{" "}
+              e inovação, estamos entre as{" "}
+              <strong>
+                maiores indústrias de colchões e acessórios do Brasil
+              </strong>{" "}
+              com foco em promover um sono de saúde aos nossos clientes.
             </p>
 
             <p class="my-5 mx-0 p-0 font-bold text-sm text-center">
@@ -62,7 +75,8 @@ function BeFranchisor({ link }: Props) {
             <iframe
               class="w-full h-[170px] rounded-[10px]"
               src="https://www.youtube.com/embed/y31bwqh0YsE"
-            ></iframe>
+            >
+            </iframe>
           </div>
         </div>
       </div>
