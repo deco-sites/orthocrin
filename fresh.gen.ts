@@ -15,18 +15,19 @@ import * as $$3 from "./islands/LiveControls.tsx";
 import * as $$4 from "./islands/Minicart.tsx";
 import * as $$5 from "./islands/MobileSidebarMenu.tsx";
 import * as $$6 from "./islands/ProductInformation.tsx";
-import * as $$$0 from "./sections/BeFranchisor.tsx";
-import * as $$$1 from "./sections/Benefits.tsx";
-import * as $$$2 from "./sections/Footer.tsx";
-import * as $$$3 from "./sections/GridCategory.tsx";
-import * as $$$4 from "./sections/Head.tsx";
-import * as $$$5 from "./sections/Header.tsx";
-import * as $$$6 from "./sections/Home.tsx";
-import * as $$$7 from "./sections/MattressSize.tsx";
-import * as $$$8 from "./sections/ProductDetails.tsx";
-import * as $$$9 from "./sections/ProductShelf.tsx";
-import * as $$$10 from "./sections/TalkToSpecialist.tsx";
-import * as $$$11 from "./sections/TypesMattresses.tsx";
+import * as $$$0 from "./sections/BannerCarrousel.tsx";
+import * as $$$1 from "./sections/BeFranchisor.tsx";
+import * as $$$2 from "./sections/Benefits.tsx";
+import * as $$$3 from "./sections/Footer.tsx";
+import * as $$$4 from "./sections/GridCategory.tsx";
+import * as $$$5 from "./sections/Head.tsx";
+import * as $$$6 from "./sections/Header.tsx";
+import * as $$$7 from "./sections/Home.tsx";
+import * as $$$8 from "./sections/MattressSize.tsx";
+import * as $$$9 from "./sections/ProductDetails.tsx";
+import * as $$$10 from "./sections/ProductShelf.tsx";
+import * as $$$11 from "./sections/TalkToSpecialist.tsx";
+import * as $$$12 from "./sections/TypesMattresses.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$1 from "./functions/vtexProductDetailsPage.ts";
 import * as $$$$2 from "./functions/vtexProductList.ts";
@@ -49,18 +50,19 @@ const manifest: DecoManifest = {
     "./islands/ProductInformation.tsx": $$6,
   },
   sections: {
-    "./sections/BeFranchisor.tsx": $$$0,
-    "./sections/Benefits.tsx": $$$1,
-    "./sections/Footer.tsx": $$$2,
-    "./sections/GridCategory.tsx": $$$3,
-    "./sections/Head.tsx": $$$4,
-    "./sections/Header.tsx": $$$5,
-    "./sections/Home.tsx": $$$6,
-    "./sections/MattressSize.tsx": $$$7,
-    "./sections/ProductDetails.tsx": $$$8,
-    "./sections/ProductShelf.tsx": $$$9,
-    "./sections/TalkToSpecialist.tsx": $$$10,
-    "./sections/TypesMattresses.tsx": $$$11,
+    "./sections/BannerCarrousel.tsx": $$$0,
+    "./sections/BeFranchisor.tsx": $$$1,
+    "./sections/Benefits.tsx": $$$2,
+    "./sections/Footer.tsx": $$$3,
+    "./sections/GridCategory.tsx": $$$4,
+    "./sections/Head.tsx": $$$5,
+    "./sections/Header.tsx": $$$6,
+    "./sections/Home.tsx": $$$7,
+    "./sections/MattressSize.tsx": $$$8,
+    "./sections/ProductDetails.tsx": $$$9,
+    "./sections/ProductShelf.tsx": $$$10,
+    "./sections/TalkToSpecialist.tsx": $$$11,
+    "./sections/TypesMattresses.tsx": $$$12,
   },
   functions: {
     "./functions/LoadGitHubRaw.ts": $$$$0,
@@ -69,6 +71,10 @@ const manifest: DecoManifest = {
     "./functions/vtexProductListingPage.ts": $$$$3,
   },
   schemas: {
+    "./sections/BannerCarrousel.tsx": {
+      "inputSchema": null,
+      "outputSchema": null,
+    },
     "./sections/BeFranchisor.tsx": {
       "inputSchema": {
         "title": " Be Franchisor",
