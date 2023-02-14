@@ -15,8 +15,8 @@ function Footer({ footerLinks }: Props) {
   const border = { "border-bottom": "2px solid #ececec" };
   const style = {
     boxShadow: "0 0 14px 0 #00000024",
-    padding: "Min(7%,25px)",
-    "max-width": "295px",
+    // padding: "Min(7%,25px)",
+    // "max-width": "295px",
   };
   const grid = {
     "border-bottom": "2px solid #ececec",
@@ -60,10 +60,10 @@ function Footer({ footerLinks }: Props) {
             <strong>Meios de pagamento</strong>
           </h6>
 
-          <div class="relative max-w-full w-full">
+          <div class="relative max-w-[295px] w-full">
             <div
               style={style}
-              class="flex flex-col flex-wrap rounded-t-[10px] rounded-b-[10px] w-[calc(100%-70px)]"
+              class="flex flex-col flex-wrap rounded-t-[10px] rounded-b-[10px] w-full max-w-[295px] py-5"
             >
               <p class="flex justify-center mb-[10px] text-[Max(1.65vh,.825rem)] gap-1">
                 Pagamento com até <span class="text-[#28b440]">2 cartões</span>
@@ -89,7 +89,11 @@ function Footer({ footerLinks }: Props) {
                 <img class="w-auto object-contain" src="/payment-diners.webp" alt="club dinner" />
               </div>
             </div>
-            <img class="absolute right-0 bottom-[24px]" src="/card-discount-seal.webp" alt="selo" />
+            <img
+              class="absolute right-[-72px] bottom-[24px]"
+              src="/card-discount-seal.webp"
+              alt="selo"
+            />
           </div>
         </div>
 
@@ -98,7 +102,7 @@ function Footer({ footerLinks }: Props) {
             <strong>Conecte-se com a gente</strong>
           </h6>
 
-          <div class="flex justify-between flex-row flex-wrap lg:gap-5">
+          <div class="flex justify-between flex-row flex-wrap lg:gap-10">
             <a href="#">
               <img src="/facebook.webp" alt="facebook" />
             </a>
