@@ -30,7 +30,7 @@ export function Categories({
             handleSelectCategory ? handleSelectCategory(item) : handleDesktopSelectCategory(item)
           }
         >
-          <img className="w-[30px] h-[40px]" src={item.imageUrl} />
+          <img className="w-[39px] h-[41px] object-contain" src={item.imageUrl} />
           <span className={`flex flex-nowrap group-hover:text-white text-xs lg:text-sm mt-1`}>
             {item.label}
           </span>
@@ -40,6 +40,39 @@ export function Categories({
           </div>
         </div>
       ))}
+      <a href="/">
+        <div
+          className={`relative flex group hover:bg-red-600 flex-col items-center justify-center w-[109px] h-[93px] cursor-pointer ease duration-200`}
+        >
+          <img
+            className="w-[39px] h-[41px] object-contain group-hover:hidden"
+            src={"https://www.orthocrin.com.br/arquivos/pronta-entrega.svg"}
+          />
+          <img
+            style={{
+              filter: "brightness(0) invert(1)",
+            }}
+            className="w-[39px] h-[41px] object-contain hidden group-hover:flex"
+            src={"https://www.orthocrin.com.br/arquivos/pronta-entrega.svg"}
+          />
+          <span
+            className={`flex flex-nowrap text-red-500 group-hover:text-white text-xs lg:text-sm mt-1`}
+          >
+            Pronta-entrega
+          </span>
+        </div>
+      </a>
+      <a href="/">
+        <div
+          className={`relative flex group flex-col items-center justify-center w-[109px] h-[93px] cursor-pointer ease duration-200`}
+        >
+          <img
+            className="w-[39px] h-[41px] object-contain"
+            src="https://www.orthocrin.com.br/arquivos/header-offer.svg"
+          />
+          <span className={`flex flex-nowrap text-xs lg:text-sm mt-1`}>Ofertas</span>
+        </div>
+      </a>
     </div>
   );
 }

@@ -13,7 +13,9 @@ export default function Categories({
   handleSelectCategory,
   selectedCategory,
 }: CategoriesProps) {
-  const [desktopSelectedCategory, setDesktopSelectedCategory] = useState(categories[0]);
+  const [desktopSelectedCategory, setDesktopSelectedCategory] = useState(
+    categories[0],
+  );
 
   const handleDesktopSelectCategory = (category: HeaderCategory) => {
     setDesktopSelectedCategory(category);
@@ -38,7 +40,9 @@ export default function Categories({
             className="w-[39px] h-[41px] object-contain hidden group-hover:flex"
             src={item.imageUrl}
           />
-          <span className={`flex flex-nowrap group-hover:text-white text-xs lg:text-sm mt-1`}>
+          <span
+            className={`flex flex-nowrap group-hover:text-white text-xs lg:text-sm mt-1`}
+          >
             {item.label}
           </span>
 
@@ -77,7 +81,9 @@ export default function Categories({
             className="w-[39px] h-[41px] object-contain"
             src="https://www.orthocrin.com.br/arquivos/header-offer.svg"
           />
-          <span className={`flex flex-nowrap text-xs lg:text-sm mt-1`}>Ofertas</span>
+          <span className={`flex flex-nowrap text-xs lg:text-sm mt-1`}>
+            Ofertas
+          </span>
         </div>
       </a>
     </div>
