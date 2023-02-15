@@ -77,7 +77,9 @@ function GridCategory({ gridItem, allCategories }: Props) {
     <div class="mx-[25px] lg:py-[60px] lg:px-[100px] xl:py-[100px] xl:px-[150px]">
       <h6 class="text-[1.25rem] font-bold lg:text-[36px] lg:gap-2 lg:flex lg:flex-col xl:flex-row xl:items-center xl:justify-start ">
         Produtos exclusivos, com{" "}
-        <span class="font-[700] text-[#ed1c24]">qualidade e alta durabilidade</span>
+        <span class="font-[700] text-[#ed1c24]">
+          qualidade e alta durabilidade
+        </span>
       </h6>
       <p class="text-[1rem] mb-[20px] lg:text-[20px] lg:text-left">
         <strong>Compre por categoria</strong>
@@ -104,21 +106,26 @@ function GridCategory({ gridItem, allCategories }: Props) {
 
       <div
         id="desktop"
-        class={`hidden lg:grid ${tw(() => ({
-          "grid-template-columns": "repeat(8, 1fr)",
-          "grid-template-rows": "repeat(2, 1fr)",
-          "grid-template-areas": `
+        class={`hidden lg:grid ${
+          tw(() => ({
+            "grid-template-columns": "repeat(8, 1fr)",
+            "grid-template-rows": "repeat(2, 1fr)",
+            "grid-template-areas": `
               "um um um dois quatro seis seis seis"
               "um um um tres cinco seis seis seis"
           `,
-          "grid-column-gap": "15px",
-          "grid-row-gap": "15px",
-          height: "min-content",
-          marginBottom: "40px",
-        }))}`}
+            "grid-column-gap": "15px",
+            "grid-row-gap": "15px",
+            height: "min-content",
+            marginBottom: "40px",
+          }))
+        }`}
       >
         {gridItem.map((item, idx) => (
-          <div style={gridItemStyleDesktop[idx]} class="relative cursor-pointer">
+          <div
+            style={gridItemStyleDesktop[idx]}
+            class="relative cursor-pointer"
+          >
             <img
               class="w-full h-full object-cover rounded-b-[10px] rounded-t-[10px]"
               src={item.imageMobile}
