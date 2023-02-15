@@ -27,7 +27,7 @@ export default function Offers({ title, products }: Props) {
         style={{
           gridAutoColumns: "minmax(160px, 190px)",
         }}
-        class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 grid-rows-1 gap-5 max-w-[1400px] mx-auto -mt-28 px-3 pb-3 overflow-x-auto overflow-y-visible"
+        class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 grid-rows-1 gap-5 mx-auto -mt-28 px-3 lg:px-[150px] pb-3 overflow-x-auto overflow-y-visible"
       >
         {products?.map((product, index) => {
           return <ProductCard key={index} {...product} />;

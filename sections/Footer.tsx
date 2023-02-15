@@ -34,7 +34,7 @@ function Footer({ footerLinks }: Props) {
 
       <div
         id="links"
-        class="grid grid-cols-2 gap-6 w-full lg:flex lg:flex-row lg:gap-5 border-b border-gray-300 py-10"
+        class="grid grid-cols-2 gap-6 w-full lg:flex lg:flex-row lg:justify-between border-b border-gray-300 py-10"
       >
         {footerLinks?.map((footerLink, idx) => (
           <div key={idx}>
