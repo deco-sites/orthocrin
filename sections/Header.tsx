@@ -11,13 +11,12 @@ export interface Props {
 
 export default function Header({ logo, whatsappLink, categories }: Props) {
   return (
-    <header className="flex flex-col pt-5 px-0 fixed top-0 bg-white w-full z-10 shadow">
+    <header className="flex flex-col pt-5 lg:pt-0 px-0 bg-white w-full z-10 shadow z-50">
       <HeaderMobile
         logo={logo}
         whatsappLink={whatsappLink}
         categories={categories}
       />
-
       <HeaderDesktop
         logo={logo}
         whatsappLink={whatsappLink}

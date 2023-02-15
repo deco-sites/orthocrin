@@ -85,7 +85,7 @@ export function Buttons() {
 
         <div
           id="my-account-dropdown-menu"
-          className="hidden group-hover:flex hover:flex flex-col gap-5 py-5 px-10 absolute top-8 left-0 bg-white rounded-md shadow-md"
+          className="hidden group-hover:flex hover:flex flex-col gap-5 py-5 px-10 absolute top-8 left-0 bg-white rounded-md shadow-md z-50"
         >
           <a
             href="/"

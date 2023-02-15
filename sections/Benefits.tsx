@@ -1,6 +1,6 @@
 function Benefits() {
   return (
-    <div class="w-full bg-[#fcf5ea] pb-[175px] pt-[15px] lg:bg-[#ECECEC] lg:pb-0 lg:pt-0 mt-[124px] lg:mt-0">
+    <div class="w-full bg-[#fcf5ea] pb-[175px] pt-[15px] lg:bg-[#ECECEC] lg:pb-0 lg:pt-0 lg:mt-0">
       <div class="flex-row flex mx-[25px] gap-[15px] lg:mx-[150px]">
         <div class="flex-col flex items-start lg:flex-row lg:w-[25%] lg:py-6 lg:pl-0 lg:pr-6 items-center lg:gap-[15px]">
           <img src="/benefit-1.webp" alt="Frete grátis" />
