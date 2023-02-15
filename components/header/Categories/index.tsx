@@ -13,7 +13,9 @@ export function Categories({
   handleSelectCategory,
   selectedCategory,
 }: CategoriesProps) {
-  const [desktopSelectedCategory, setDesktopSelectedCategory] = useState(categories[0]);
+  const [desktopSelectedCategory, setDesktopSelectedCategory] = useState(
+    categories[0],
+  );
 
   const handleDesktopSelectCategory = (category: HeaderCategory) => {
     setDesktopSelectedCategory(category);
@@ -27,16 +29,25 @@ export function Categories({
           className={`relative flex group hover:bg-red-600 flex-col items-center justify-center w-[109px] h-[93px] cursor-pointer ease duration-200`}
           onMouseEnter={() => handleDesktopSelectCategory(item)}
           onClick={() =>
-            handleSelectCategory ? handleSelectCategory(item) : handleDesktopSelectCategory(item)
-          }
+            handleSelectCategory
+              ? handleSelectCategory(item)
+              : handleDesktopSelectCategory(item)}
         >
-          <img className="w-[39px] h-[41px] object-contain" src={item.imageUrl} />
-          <span className={`flex flex-nowrap group-hover:text-white text-xs lg:text-sm mt-1`}>
+          <img
+            className="w-[39px] h-[41px] object-contain"
+            src={item.imageUrl}
+          />
+          <span
+            className={`flex flex-nowrap group-hover:text-white text-xs lg:text-sm mt-1`}
+          >
             {item.label}
           </span>
 
           <div className="absolute left-0 top-[84px] hidden group-hover:hidden lg:group-hover:flex p-[30px] bg-white z-20 rounded-[10px] shadow-md">
-            <CategoryMenu category={selectedCategory ?? desktopSelectedCategory ?? categories[0]} />
+            <CategoryMenu
+              category={selectedCategory ?? desktopSelectedCategory ??
+                categories[0]}
+            />
           </div>
         </div>
       ))}
@@ -70,7 +81,9 @@ export function Categories({
             className="w-[39px] h-[41px] object-contain"
             src="https://www.orthocrin.com.br/arquivos/header-offer.svg"
           />
-          <span className={`flex flex-nowrap text-xs lg:text-sm mt-1`}>Ofertas</span>
+          <span className={`flex flex-nowrap text-xs lg:text-sm mt-1`}>
+            Ofertas
+          </span>
         </div>
       </a>
     </div>
