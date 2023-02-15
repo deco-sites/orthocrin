@@ -1,6 +1,6 @@
 import { Buttons } from "$components/header/Buttons/index.tsx";
 import { Logo } from "$components/header/Logo/index.tsx";
-import { Categories } from "$components/header/Categories/index.tsx";
+import Categories from "./Categories.tsx";
 import type { Image } from "$live/std/ui/types/Image.ts";
 import { HeaderCategory } from "../types/Category.ts";
 
@@ -13,14 +13,9 @@ export interface HeaderDesktopProps {
   categories: HeaderCategory[];
 }
 
-export default function HeaderDesktop(
-  { logo, whatsappLink, categories }: HeaderDesktopProps,
-) {
+export default function HeaderDesktop({ logo, whatsappLink, categories }: HeaderDesktopProps) {
   return (
-    <div
-      id="header-desktop"
-      className="hidden lg:flex flex-wrap w-full items-center gap-8"
-    >
+    <div id="header-desktop" className="hidden lg:flex flex-wrap w-full items-center gap-8">
       <div className="w-[292px] h-[53px] ml-6 order-1">
         <Logo logo={logo} />
       </div>

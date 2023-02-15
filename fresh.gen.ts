@@ -9,13 +9,14 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/AddToCart.tsx";
-import * as $$1 from "./islands/HeaderDesktop.tsx";
-import * as $$2 from "./islands/HeaderMobile.tsx";
-import * as $$3 from "./islands/LiveControls.tsx";
-import * as $$4 from "./islands/MenuBurguer.tsx";
-import * as $$5 from "./islands/Minicart.tsx";
-import * as $$6 from "./islands/MobileSidebarMenu.tsx";
-import * as $$7 from "./islands/ProductInformation.tsx";
+import * as $$1 from "./islands/Categories.tsx";
+import * as $$2 from "./islands/HeaderDesktop.tsx";
+import * as $$3 from "./islands/HeaderMobile.tsx";
+import * as $$4 from "./islands/LiveControls.tsx";
+import * as $$5 from "./islands/MenuBurguer.tsx";
+import * as $$6 from "./islands/Minicart.tsx";
+import * as $$7 from "./islands/MobileSidebarMenu.tsx";
+import * as $$8 from "./islands/ProductInformation.tsx";
 import * as $$$0 from "./sections/BannerCarrousel.tsx";
 import * as $$$1 from "./sections/BeFranchisor.tsx";
 import * as $$$2 from "./sections/Benefits.tsx";
@@ -44,13 +45,14 @@ const manifest: DecoManifest = {
   },
   islands: {
     "./islands/AddToCart.tsx": $$0,
-    "./islands/HeaderDesktop.tsx": $$1,
-    "./islands/HeaderMobile.tsx": $$2,
-    "./islands/LiveControls.tsx": $$3,
-    "./islands/MenuBurguer.tsx": $$4,
-    "./islands/Minicart.tsx": $$5,
-    "./islands/MobileSidebarMenu.tsx": $$6,
-    "./islands/ProductInformation.tsx": $$7,
+    "./islands/Categories.tsx": $$1,
+    "./islands/HeaderDesktop.tsx": $$2,
+    "./islands/HeaderMobile.tsx": $$3,
+    "./islands/LiveControls.tsx": $$4,
+    "./islands/MenuBurguer.tsx": $$5,
+    "./islands/Minicart.tsx": $$6,
+    "./islands/MobileSidebarMenu.tsx": $$7,
+    "./islands/ProductInformation.tsx": $$8,
   },
   sections: {
     "./sections/BannerCarrousel.tsx": $$$0,
