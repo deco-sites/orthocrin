@@ -1,10 +1,7 @@
 import { Product } from "$live/std/commerce/types.ts";
 import AddToCart from "../islands/AddToCart.tsx";
 import Image from "$live/std/ui/components/Image.tsx";
-import {
-  bestInstallment,
-  installmentToString,
-} from "../sections/ProductDetails.tsx";
+import { bestInstallment, installmentToString } from "../sections/ProductDetails.tsx";
 import { formatInstallments } from "../utils/formatProductInfo.ts";
 
 interface Image {
@@ -27,11 +24,11 @@ export default function ProductCard({
   const offer = offers?.offers[0];
   const seller = offer?.seller;
   const listPrice = offer?.priceSpecification.find(
-    (spec) => spec.priceType === "https://schema.org/ListPrice",
+    (spec) => spec.priceType === "https://schema.org/ListPrice"
   );
   const price = offer?.price;
-  const discountPercentage = listPrice && price &&
-    Math.trunc(Math.max(1 - price / listPrice.price, 0) * 100);
+  const discountPercentage =
+    listPrice && price && Math.trunc(Math.max(1 - price / listPrice.price, 0) * 100);
   const installment = offer?.priceSpecification.reduce(bestInstallment, null);
 
   const hasVariant = isVariantOf?.hasVariant;
@@ -41,7 +38,7 @@ export default function ProductCard({
   return (
     <div
       id={`product-card-${productID}`}
-      class="flex flex-col justify-around w-full h-[450px] p-2 group relative border border-white bg-white shadow-md rounded-2xl"
+      class="flex flex-col justify-around w-full max-w-[190px] h-[415px] p-2 group relative border border-white bg-white shadow-md rounded-2xl"
     >
       <a href={url}>
         {img && img.url && (
@@ -76,25 +73,20 @@ export default function ProductCard({
         <div class="text-xs flex flex-col gap-2 mt-2">
           <div className="flex justify-between">
             {!!listPrice && (
-              <span class="line-through text-gray-500">
-                R$ {listPrice.price.toFixed(2)}
-              </span>
+              <span class="line-through text-gray-500">R$ {listPrice.price.toFixed(2)}</span>
             )}
 
             {!!discountPercentage && (
               <div
                 className="flex items-center justify-center pr-2 pl-1"
                 style={{
-                  backgroundImage:
-                    "url(https://orthocrin.vteximg.com.br/arquivos/off-tag.svg)",
+                  backgroundImage: "url(https://orthocrin.vteximg.com.br/arquivos/off-tag.svg)",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                   backgroundPosition: "50%",
                 }}
               >
-                <span class="text-white text-xs font-bold">
-                  {discountPercentage}% OFF
-                </span>
+                <span class="text-white text-xs font-bold">{discountPercentage}% OFF</span>
               </div>
             )}
           </div>
@@ -109,9 +101,7 @@ export default function ProductCard({
 
       <a href={url}>
         {!!installment && (
-          <div class="text-[11px] text-[#737378] mt-1">
-            {formatInstallments(installment)}
-          </div>
+          <div class="text-[11px] text-[#737378] mt-1">{formatInstallments(installment)}</div>
         )}
       </a>
     </div>
