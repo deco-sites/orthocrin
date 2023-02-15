@@ -38,7 +38,7 @@ export default function HeaderDesktop(
   // Adiciona efeito de esconder parte das categorias no desktop
   useEffect(() => {
     const interval = setInterval(() => {
-      const headerDesktopCategories = document.querySelector(
+      const headerDesktopCategories: any = document.querySelector(
         "#header-desktop--categories",
       );
 
@@ -47,9 +47,9 @@ export default function HeaderDesktop(
         clearInterval(interval);
         self.addEventListener("scroll", (e) => {
           if (window.scrollY > 600) {
-            headerDesktopCategories.setAttribute("style", "margin-top: -55px;");
+            headerDesktopCategories.style.marginTop = "-55px";
           } else {
-            headerDesktopCategories.setAttribute("style", "margin-top: -55px;");
+            headerDesktopCategories.style.marginTop = "0px";
           }
         });
       }
