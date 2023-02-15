@@ -14,16 +14,23 @@ export interface HeaderDesktopProps {
   categories: HeaderCategory[];
 }
 
-export default function HeaderDesktop({ logo, whatsappLink, categories }: HeaderDesktopProps) {
+export default function HeaderDesktop(
+  { logo, whatsappLink, categories }: HeaderDesktopProps,
+) {
   // Adiciona position sticky na section gerada pela Deco
   useEffect(() => {
     const interval = setInterval(() => {
-      const headerWrapper = document.querySelector('[data-manifest-key="./sections/Header.tsx"]');
+      const headerWrapper = document.querySelector(
+        '[data-manifest-key="./sections/Header.tsx"]',
+      );
 
       // deno-lint-ignore no-extra-boolean-cast
       if (!!headerWrapper) {
         clearInterval(interval);
-        headerWrapper.setAttribute("style", "position: sticky; top: 0; z-index: 100");
+        headerWrapper.setAttribute(
+          "style",
+          "position: sticky; top: 0; z-index: 100",
+        );
       }
     }, 500);
   }, []);
@@ -31,7 +38,9 @@ export default function HeaderDesktop({ logo, whatsappLink, categories }: Header
   // Adiciona efeito de esconder parte das categorias no desktop
   useEffect(() => {
     const interval = setInterval(() => {
-      const headerDesktopCategories = document.querySelector("#header-desktop--categories");
+      const headerDesktopCategories = document.querySelector(
+        "#header-desktop--categories",
+      );
 
       // deno-lint-ignore no-extra-boolean-cast
       if (!!headerDesktopCategories) {
