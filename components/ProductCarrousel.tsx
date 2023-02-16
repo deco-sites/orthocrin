@@ -9,16 +9,21 @@ import ProductCard from "../components/ProductCard.tsx";
 
 export interface CarouselProps {
   products: LoaderReturnType<Product[]>;
-  title: string;
+  title?: string;
+  titleColor?: string;
 }
 
-function ProductCarrousel({ products = [], title }: CarouselProps) {
+function ProductCarrousel({ products = [], title, titleColor }: CarouselProps) {
   const id = useId();
   const carrouselId = `carrousel-product-${Math.floor(Math.random() * 100)}`;
 
   return (
     <div id={id} class="mb-8 pb-6 relative w-full overflow-hidden relative">
-      {title && <h2 class="mb-6 text-xl md:text-2xl font-bold">{title}</h2>}
+      {title && (
+        <h2 class={`mb-6 text-xl md:text-2xl font-bold ${titleColor ? titleColor : "text-black"}`}>
+          {title}
+        </h2>
+      )}
 
       <ul
         data-slider-content={carrouselId}
