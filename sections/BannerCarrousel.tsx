@@ -34,5 +34,9 @@ const mockedImages = [
 ];
 
 export default function BannerCarousel({ images }: Props) {
-  return <ImageCarrousel images={images ?? mockedImages} />;
+  return (
+    <div class="w-full hidden lg:block">
+      <ImageCarrousel images={images ?? mockedImages} />
+    </div>
+  );
 }

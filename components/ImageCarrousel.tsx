@@ -85,12 +85,18 @@ export function ImageCarrousel({ images = [] }: ImageCarrouselProps) {
               <button
                 class={`w-2 h-2 bg-gray-200 disabled:bg-black disabled:opacity-50 rounded-full outline-none`}
                 data-dot={carrouselId}
-              ></button>
+              >
+              </button>
             ))}
           </div>
 
           {/* Effects for transitioning between images */}
-          <Slider items={images.length} id={id} delay={5_000} carouselId={carrouselId} />
+          <Slider
+            items={images.length}
+            id={id}
+            delay={5_000}
+            carouselId={carrouselId}
+          />
         </>
       )}
     </div>

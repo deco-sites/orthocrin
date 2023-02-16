@@ -22,12 +22,15 @@ function ProductCarrousel({ products = [], title }: CarouselProps) {
 
       <ul
         data-slider-content={carrouselId}
-        class="flex flex-nowrap transition gap-[30px] overflow-hidden"
-        style={{ width: `calc(${products.length}*calc(190px+30px))` }}
+        class={`
+          flex flex-nowrap transition gap-[12px] lg:gap-[30px] overflow-hidden pb-2
+          w-[calc(${products.length}*calc(160px+12px))]
+          lg:w-[calc(${products.length}*calc(190px+30px))]
+        `}
       >
         {products?.map((product, index) => {
           return (
-            <li class="w-full max-w-[190px]">
+            <li class="w-full max-w-[160px] lg:max-w-[190px]">
               <a href="/" class="w-full">
                 <ProductCard key={index} {...product} />
               </a>
@@ -63,7 +66,14 @@ function ProductCarrousel({ products = [], title }: CarouselProps) {
           </div>
 
           {/* Effects for transitioning between images */}
-          <Slider items={products?.length} id={id} delay={5_000} carouselId={carrouselId} />
+          <Slider
+            items={products?.length}
+            id={id}
+            delay={5_000}
+            itemsPerPageMobile={2}
+            itemsPerPageDesktop={6}
+            carouselId={carrouselId}
+          />
         </>
       )}
     </div>

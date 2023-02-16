@@ -20,16 +20,31 @@ import { useEffect, useState } from "preact/hooks";
 interface Props {
   items: number;
   delay?: number;
+  itemsPerPageMobile?: number;
+  itemsPerPageDesktop?: number;
   id: string;
   carouselId: string;
 }
 
-function Slider({ id, items, carouselId, delay = 2_000 }: Props) {
+function Slider({
+  id,
+  items,
+  carouselId,
+  itemsPerPageDesktop = 1,
+  itemsPerPageMobile = 1,
+  delay = 2_000,
+}: Props) {
   const [index, setIndex] = useState(0);
 
   // Timer
   useEffect(() => {
-    const id = setInterval(() => setIndex((index + 1) % items), delay);
+    let id = 0;
+
+    if (window.innerWidth < 768) {
+      id = setInterval(() => setIndex(items - index > itemsPerPageMobile ? index + 1 : 0), delay);
+    } else {
+      id = setInterval(() => setIndex(items - index > itemsPerPageDesktop ? index + 1 : 0), delay);
+    }
 
     return () => {
       clearInterval(id);
