@@ -20,7 +20,11 @@ function ProductCarrousel({ products = [], title, titleColor }: CarouselProps) {
   return (
     <div id={id} class="mb-8 pb-6 relative w-full overflow-hidden relative">
       {title && (
-        <h2 class={`mb-6 text-xl md:text-2xl font-bold ${titleColor ? titleColor : "text-black"}`}>
+        <h2
+          class={`mb-6 text-xl md:text-2xl font-bold ${
+            titleColor ? titleColor : "text-black"
+          }`}
+        >
           {title}
         </h2>
       )}
@@ -66,7 +70,8 @@ function ProductCarrousel({ products = [], title, titleColor }: CarouselProps) {
               <button
                 class={`w-2 h-2 bg-gray-200 disabled:bg-black disabled:opacity-50 rounded-full outline-none`}
                 data-dot={carrouselId}
-              ></button>
+              >
+              </button>
             ))}
           </div>
 

@@ -14,20 +14,26 @@ export interface Props {
 
 const mockedImages = [
   {
-    desktop: "https://orthocrin.vteximg.com.br/arquivos/ids/166383/banner-desktop-vega.jpg",
-    mobile: "https://orthocrin.vteximg.com.br/arquivos/ids/166383/banner-desktop-vega.jpg",
+    desktop:
+      "https://orthocrin.vteximg.com.br/arquivos/ids/166383/banner-desktop-vega.jpg",
+    mobile:
+      "https://orthocrin.vteximg.com.br/arquivos/ids/166383/banner-desktop-vega.jpg",
     alt: "Banner 1",
     href: "/",
   },
   {
-    desktop: "https://orthocrin.vteximg.com.br/arquivos/ids/166383/banner-desktop-vega.jpg",
-    mobile: "https://orthocrin.vteximg.com.br/arquivos/ids/166383/banner-desktop-vega.jpg",
+    desktop:
+      "https://orthocrin.vteximg.com.br/arquivos/ids/166383/banner-desktop-vega.jpg",
+    mobile:
+      "https://orthocrin.vteximg.com.br/arquivos/ids/166383/banner-desktop-vega.jpg",
     alt: "Banner 1",
     href: "/",
   },
   {
-    desktop: "https://orthocrin.vteximg.com.br/arquivos/ids/166383/banner-desktop-vega.jpg",
-    mobile: "https://orthocrin.vteximg.com.br/arquivos/ids/166383/banner-desktop-vega.jpg",
+    desktop:
+      "https://orthocrin.vteximg.com.br/arquivos/ids/166383/banner-desktop-vega.jpg",
+    mobile:
+      "https://orthocrin.vteximg.com.br/arquivos/ids/166383/banner-desktop-vega.jpg",
     alt: "Banner 1",
     href: "/",
   },

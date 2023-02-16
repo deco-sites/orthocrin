@@ -41,9 +41,15 @@ function Slider({
     let id = 0;
 
     if (window.innerWidth < 768) {
-      id = setInterval(() => setIndex(items - index > itemsPerPageMobile ? index + 1 : 0), delay);
+      id = setInterval(
+        () => setIndex(items - index > itemsPerPageMobile ? index + 1 : 0),
+        delay,
+      );
     } else {
-      id = setInterval(() => setIndex(items - index > itemsPerPageDesktop ? index + 1 : 0), delay);
+      id = setInterval(
+        () => setIndex(items - index > itemsPerPageDesktop ? index + 1 : 0),
+        delay,
+      );
     }
 
     return () => {
@@ -55,7 +61,9 @@ function Slider({
   useEffect(() => {
     const content = document
       // .getElementById(id)
-      ?.querySelector(`[data-slider-content="${carouselId}"]`) as HTMLDivElement;
+      ?.querySelector(
+        `[data-slider-content="${carouselId}"]`,
+      ) as HTMLDivElement;
 
     if (content) {
       content.style.transform = `translateX(-${(100 / items) * index}%)`;
@@ -65,7 +73,9 @@ function Slider({
 
     if (dots) {
       dots.forEach((dot, it) =>
-        it === index ? dot.setAttribute("disabled", "") : dot.removeAttribute("disabled")
+        it === index
+          ? dot.setAttribute("disabled", "")
+          : dot.removeAttribute("disabled")
       );
     }
   }, [index]);
@@ -109,7 +119,9 @@ function Slider({
     });
 
     return () => {
-      dots.forEach((dot, index) => dot.removeEventListener("click", listeners[index]));
+      dots.forEach((dot, index) =>
+        dot.removeEventListener("click", listeners[index])
+      );
     };
   }, []);
 
