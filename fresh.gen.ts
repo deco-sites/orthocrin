@@ -22,18 +22,17 @@ import * as $$10 from "./islands/ProductShelf.tsx";
 import * as $$$0 from "./sections/BannerCarrousel.tsx";
 import * as $$$1 from "./sections/BeFranchisor.tsx";
 import * as $$$2 from "./sections/Benefits.tsx";
-import * as $$$3 from "./sections/DecoCarrousel.tsx";
-import * as $$$4 from "./sections/Footer.tsx";
-import * as $$$5 from "./sections/GridCategory.tsx";
-import * as $$$6 from "./sections/Head.tsx";
-import * as $$$7 from "./sections/Header.tsx";
-import * as $$$8 from "./sections/Home.tsx";
-import * as $$$9 from "./sections/MattressSize.tsx";
-import * as $$$10 from "./sections/Offers.tsx";
-import * as $$$11 from "./sections/ProductDetails.tsx";
-import * as $$$12 from "./sections/ProductShelf.tsx";
-import * as $$$13 from "./sections/TalkToSpecialist.tsx";
-import * as $$$14 from "./sections/TypesMattresses.tsx";
+import * as $$$3 from "./sections/Footer.tsx";
+import * as $$$4 from "./sections/GridCategory.tsx";
+import * as $$$5 from "./sections/Head.tsx";
+import * as $$$6 from "./sections/Header.tsx";
+import * as $$$7 from "./sections/Home.tsx";
+import * as $$$8 from "./sections/MattressSize.tsx";
+import * as $$$9 from "./sections/Offers.tsx";
+import * as $$$10 from "./sections/ProductDetails.tsx";
+import * as $$$11 from "./sections/ProductShelf.tsx";
+import * as $$$12 from "./sections/TalkToSpecialist.tsx";
+import * as $$$13 from "./sections/TypesMattresses.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$1 from "./functions/vtexProductDetailsPage.ts";
 import * as $$$$2 from "./functions/vtexProductList.ts";
@@ -63,18 +62,17 @@ const manifest: DecoManifest = {
     "./sections/BannerCarrousel.tsx": $$$0,
     "./sections/BeFranchisor.tsx": $$$1,
     "./sections/Benefits.tsx": $$$2,
-    "./sections/DecoCarrousel.tsx": $$$3,
-    "./sections/Footer.tsx": $$$4,
-    "./sections/GridCategory.tsx": $$$5,
-    "./sections/Head.tsx": $$$6,
-    "./sections/Header.tsx": $$$7,
-    "./sections/Home.tsx": $$$8,
-    "./sections/MattressSize.tsx": $$$9,
-    "./sections/Offers.tsx": $$$10,
-    "./sections/ProductDetails.tsx": $$$11,
-    "./sections/ProductShelf.tsx": $$$12,
-    "./sections/TalkToSpecialist.tsx": $$$13,
-    "./sections/TypesMattresses.tsx": $$$14,
+    "./sections/Footer.tsx": $$$3,
+    "./sections/GridCategory.tsx": $$$4,
+    "./sections/Head.tsx": $$$5,
+    "./sections/Header.tsx": $$$6,
+    "./sections/Home.tsx": $$$7,
+    "./sections/MattressSize.tsx": $$$8,
+    "./sections/Offers.tsx": $$$9,
+    "./sections/ProductDetails.tsx": $$$10,
+    "./sections/ProductShelf.tsx": $$$11,
+    "./sections/TalkToSpecialist.tsx": $$$12,
+    "./sections/TypesMattresses.tsx": $$$13,
   },
   functions: {
     "./functions/LoadGitHubRaw.ts": $$$$0,
@@ -84,7 +82,47 @@ const manifest: DecoManifest = {
   },
   schemas: {
     "./sections/BannerCarrousel.tsx": {
-      "inputSchema": null,
+      "inputSchema": {
+        "title": " Banner Carrousel",
+        "type": "object",
+        "properties": {
+          "images": {
+            "type": "array",
+            "items": {
+              "title": "Image",
+              "type": "object",
+              "properties": {
+                "desktop": {
+                  "format": "image-uri",
+                  "type": "string",
+                  "title": "Desktop",
+                },
+                "mobile": {
+                  "format": "image-uri",
+                  "type": "string",
+                  "title": "Mobile",
+                },
+                "href": {
+                  "type": "string",
+                  "title": "Href",
+                },
+                "alt": {
+                  "type": "string",
+                  "title": "Alt",
+                },
+              },
+              "required": [
+                "desktop",
+                "mobile",
+                "href",
+                "alt",
+              ],
+            },
+            "title": "Images",
+          },
+        },
+        "required": [],
+      },
       "outputSchema": null,
     },
     "./sections/BeFranchisor.tsx": {
@@ -105,29 +143,6 @@ const manifest: DecoManifest = {
     },
     "./sections/Benefits.tsx": {
       "inputSchema": null,
-      "outputSchema": null,
-    },
-    "./sections/DecoCarrousel.tsx": {
-      "inputSchema": {
-        "title": " Deco Carrousel",
-        "type": "object",
-        "properties": {
-          "products": {
-            "$id": "546cbd7d0ccd06d3cfddd3184a52c465c9b5139a",
-            "format": "live-function",
-            "type": "string",
-            "title": "Products",
-          },
-          "title": {
-            "type": "string",
-            "title": "Title",
-          },
-        },
-        "required": [
-          "products",
-          "title",
-        ],
-      },
       "outputSchema": null,
     },
     "./sections/Footer.tsx": {

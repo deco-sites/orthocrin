@@ -21,9 +21,10 @@ interface Props {
   items: number;
   delay?: number;
   id: string;
+  carouselId: string;
 }
 
-function Slider({ id, items, delay = 2_000 }: Props) {
+function Slider({ id, items, carouselId, delay = 2_000 }: Props) {
   const [index, setIndex] = useState(0);
 
   // Timer
@@ -38,14 +39,14 @@ function Slider({ id, items, delay = 2_000 }: Props) {
   // Focus the right content
   useEffect(() => {
     const content = document
-      .getElementById(id)
-      ?.querySelector("[data-slider-content]") as HTMLDivElement;
+      // .getElementById(id)
+      ?.querySelector(`[data-slider-content="${carouselId}"]`) as HTMLDivElement;
 
     if (content) {
       content.style.transform = `translateX(-${(100 / items) * index}%)`;
     }
 
-    const dots = document.getElementById(id)?.querySelectorAll("[data-dot]");
+    const dots = document?.querySelectorAll(`[data-dot="${carouselId}"]`);
 
     if (dots) {
       dots.forEach((dot, it) =>
@@ -56,8 +57,12 @@ function Slider({ id, items, delay = 2_000 }: Props) {
 
   // Handles next/prev elements
   useEffect(() => {
-    const prevElement = document.getElementById(id)?.querySelector("[data-slider-prev]");
-    const nextElement = document.getElementById(id)?.querySelector("[data-slider-next]");
+    const prevElement = document
+      // .getElementById(id)
+      ?.querySelector(`[data-slider-prev="${carouselId}"]`);
+    const nextElement = document
+      // .getElementById(id)
+      ?.querySelector(`[data-slider-next="${carouselId}"]`);
 
     const next = () => setIndex((i) => (i + 1) % items);
     const prev = () => setIndex((i) => (i > 0 ? i - 1 : items - 1));
@@ -73,7 +78,7 @@ function Slider({ id, items, delay = 2_000 }: Props) {
 
   // Handles button control elements (dots)
   useEffect(() => {
-    const dots = document.getElementById(id)?.querySelectorAll("[data-dot]");
+    const dots = document?.querySelectorAll(`[data-dot="${carouselId}"]`);
 
     if (!dots) {
       return;

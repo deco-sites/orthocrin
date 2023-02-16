@@ -1,9 +1,5 @@
 import { useId } from "preact/hooks";
-import { Image as LiveImage } from "$live/std/ui/types/Image.ts";
 
-import { tw } from "twind";
-
-import Icon from "../components/ui/Icon.tsx";
 import Slider from "../islands/DecoSlider.tsx";
 
 import type { LoaderReturnType } from "$live/std/types.ts";
@@ -16,15 +12,16 @@ export interface CarouselProps {
   title: string;
 }
 
-function Carousel({ products = [], title }: CarouselProps) {
+function ProductCarrousel({ products = [], title }: CarouselProps) {
   const id = useId();
+  const carrouselId = `carrousel-product-${Math.floor(Math.random() * 100)}`;
 
   return (
     <div id={id} class="mb-8 pb-6 relative w-full overflow-hidden relative">
       {title && <h2 class="mb-6 text-xl md:text-2xl font-bold">{title}</h2>}
 
       <ul
-        data-slider-content
+        data-slider-content={carrouselId}
         class="flex flex-nowrap transition gap-[30px] overflow-hidden"
         style={{ width: `calc(${products.length}*calc(190px+30px))` }}
       >
@@ -44,13 +41,13 @@ function Carousel({ products = [], title }: CarouselProps) {
           {/* Next/Prev button Controls */}
           <button
             class="outline-none rounded-lg absolute top-0 lg:top-1/2 right-[55px] lg:left-0 lg:right-auto bg-gray-200 bg-opacity-40 ml-2 text-black outline-none p-2"
-            data-slider-prev
+            data-slider-prev={carrouselId}
           >
             {"<"}
           </button>
           <button
             class="outline-none rounded-lg absolute top-0 lg:top-1/2 right-[15px] lg:right-0 bg-gray-200 bg-opacity-40 mr-2 text-black outline-none p-2"
-            data-slider-next
+            data-slider-next={carrouselId}
           >
             {">"}
           </button>
@@ -59,22 +56,18 @@ function Carousel({ products = [], title }: CarouselProps) {
           <div class="absolute w-full bottom-0 flex justify-center gap-2 flex-nowrap">
             {products?.map(() => (
               <button
-                class={`w-2 h-2 bg-gray-200 rounded-full text-white disabled:text-gray-600 outline-none opacity-20 ${tw(
-                  () => ({
-                    "&:[disabled]": { opacity: 1 },
-                  })
-                )}`}
-                data-dot
+                class={`w-2 h-2 bg-gray-200 disabled:bg-black disabled:opacity-50 rounded-full outline-none`}
+                data-dot={carrouselId}
               ></button>
             ))}
           </div>
 
           {/* Effects for transitioning between images */}
-          <Slider items={products.length} id={id} delay={5_000} />
+          <Slider items={products?.length} id={id} delay={5_000} carouselId={carrouselId} />
         </>
       )}
     </div>
   );
 }
 
-export default Carousel;
+export default ProductCarrousel;
