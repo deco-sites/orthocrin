@@ -118,9 +118,14 @@ const manifest: DecoManifest = {
             "type": "string",
             "title": "Products",
           },
+          "title": {
+            "type": "string",
+            "title": "Title",
+          },
         },
         "required": [
           "products",
+          "title",
         ],
       },
       "outputSchema": null,

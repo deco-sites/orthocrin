@@ -4,8 +4,6 @@ import type { Product } from "$live/std/commerce/types.ts";
 import ProductCard from "../components/ProductCard.tsx";
 import { useEffect, useState } from "preact/hooks";
 
-import { defaults } from "../static/swiper/swiperjs.js";
-
 interface CarouselProps {
   products: LoaderReturnType<Product[]>;
 }

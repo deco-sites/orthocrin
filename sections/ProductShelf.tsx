@@ -12,9 +12,7 @@ export interface Props {
 export default function ProductShelf({ title, products }: Props) {
   return (
     <section class="w-full pt-8 px-6 mx-auto lg:px-[150px]">
-      {title && <h2 class="mb-6 text-xl md:text-2xl font-bold">{title}</h2>}
-
-      <Carousel products={products} />
+      <Carousel products={products} title={title} />
 
       {/* <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
         {products?.map((product, index) => {

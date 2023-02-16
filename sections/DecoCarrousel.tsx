@@ -13,20 +13,20 @@ import ProductCard from "../components/ProductCard.tsx";
 
 export interface CarouselProps {
   products: LoaderReturnType<Product[]>;
-  /**
-   * @description Check this option when this banner is the biggest image on the screen for image optimizations
-   */
+  title: string;
 }
 
-function Carousel({ products = [] }: CarouselProps) {
+function Carousel({ products = [], title }: CarouselProps) {
   const id = useId();
 
   return (
-    <div id={id} class="mb-8 pb-6 relative w-full overflow-hidden">
+    <div id={id} class="mb-8 pb-6 relative w-full overflow-hidden relative">
+      {title && <h2 class="mb-6 text-xl md:text-2xl font-bold">{title}</h2>}
+
       <ul
         data-slider-content
-        class="flex flex-nowrap transition gap-5"
-        style={{ width: `calc(${products.length}*calc(190px+20px))` }}
+        class="flex flex-nowrap transition gap-[30px] overflow-hidden"
+        style={{ width: `calc(${products.length}*calc(190px+30px))` }}
       >
         {products?.map((product, index) => {
           return (
@@ -43,16 +43,16 @@ function Carousel({ products = [] }: CarouselProps) {
         <>
           {/* Next/Prev button Controls */}
           <button
-            class="absolute bg-red-500 top-1/2 left-0 ml-2 text-black outline-none p-2"
+            class="outline-none rounded-lg absolute top-0 lg:top-1/2 right-[55px] lg:left-0 lg:right-auto bg-gray-200 bg-opacity-40 ml-2 text-black outline-none p-2"
             data-slider-prev
           >
-            PREV
+            {"<"}
           </button>
           <button
-            class="absolute top-1/2 bg-red-500 right-0 mr-2 text-black outline-none p-2"
+            class="outline-none rounded-lg absolute top-0 lg:top-1/2 right-[15px] lg:right-0 bg-gray-200 bg-opacity-40 mr-2 text-black outline-none p-2"
             data-slider-next
           >
-            NEXT
+            {">"}
           </button>
 
           {/* Dots buttons, usually bellow main image */}
